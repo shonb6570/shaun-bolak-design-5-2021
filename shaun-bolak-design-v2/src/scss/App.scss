@@ -1,0 +1,149 @@
+@import "~bootstrap/scss/bootstrap";
+
+//font stacks
+@font-face {
+    font-family: 'DolceVitaLight';
+    src: url('../fonts/dolce_vita/Dolce-Vita-Light.woff') format('woff'),
+         url('../fonts/dolce_vita/Dolce-Vita-Light.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'DolceVita';
+    src: url('../fonts/dolce_vita/Dolce-Vita.woff') format('woff'),
+         url('../fonts/dolce_vita/Dolce-Vita.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'DolceVitaBold';
+    src: url('../fonts/dolce_vita/Dolce-Vita-Heavy-Bold.woff') format('woff'),
+         url('../fonts/dolce_vita/Dolce-Vita-Heavy-Bold.ttf') format('truetype')
+}
+
+
+// variables
+
+$primary-color: #C9AD75;
+
+//fonts 
+
+$font-primary-reg: "DolceVita", sans-serif;
+$font-primary-thin: "DolceVitaLight", sans-serif;
+$font-primary-bold: "DolceVitaBold", sans-serif;
+
+//animations 
+
+#hero-bg {
+    stroke-dasharray: 200px;
+}
+
+//base
+
+#root,
+html {
+    background-color: black;
+}
+
+
+#navigation-logo,
+#navigation-link {
+    color: $primary-color;
+}
+
+#navigation-bar {
+    background-color: black;
+    border-bottom: 2px solid $primary-color;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("../assets/list.svg") !important;
+}
+
+
+// home content
+
+.home-bg-img {
+    background-image: url("../assets/home-background.svg");
+    background-color: #000000;
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 70px;
+}
+
+//home links
+.hero-link-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-link{
+    font-size: 175px;
+    text-decoration: none;
+    margin-right: 45%;
+    font-family: "DolceVita", sans-serif;
+    line-height: 120px;
+    text-align:right;
+}
+
+.hero-link:first-child{
+    margin-top: 100px;
+    letter-spacing: -1.5px;
+}
+
+.hero-link:nth-child(2){
+    padding-right: 35px;
+    color: yellow;
+    letter-spacing: -4px;
+    &:hover {
+        text-decoration: none;
+        color: rgb(245, 245, 155);
+    }
+}
+.hero-link:nth-child(3){
+    padding-right: 25px;
+    letter-spacing: -.5px;
+}
+.hero-link:last-child{
+    padding-right: 30px;
+    letter-spacing: -0.5px;
+}
+
+.hero-link:first-child,
+.hero-link:nth-child(3),
+.hero-link:last-child {
+    color: white;
+}
+
+.hero-link:first-child:hover,
+.hero-link:nth-child(2):hover,
+.hero-link:nth-child(3):hover,
+.hero-link:last-child:hover {
+    &:hover {
+        text-decoration: none;
+        color: $primary-color;
+    }
+}
+
+
+
+//footer styles
+
+.footer{
+    background-color: $primary-color;
+    border-top: 1px solid #E7E7E7;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 10px;
+    width: 100%;
+}
+
+.phantom {
+  display:block;
+  padding:10px;
+  height:10px;
+  width:100%;
+}
