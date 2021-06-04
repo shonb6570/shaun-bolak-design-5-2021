@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/App.scss';
-import { Navigation } from './components/Navigation';
+import { NavigationBar } from './components/Navigation';
+import { LeftLinks } from './components/LeftSideBar';
+import { RightLinks } from './components/RightSideBar';
 import { Layout } from './components/Layout';
 import { Home } from './Home';
 import { About } from './About';
@@ -16,8 +18,9 @@ class App extends Component {
  render() {
    return (
     <React.Fragment>
-      <Navigation />
-
+      <NavigationBar />
+      <LeftLinks />
+      <RightLinks />
       <Layout>
       
         <Router>

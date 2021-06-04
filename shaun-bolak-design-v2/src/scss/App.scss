@@ -43,6 +43,72 @@ html {
     background-color: black;
 }
 
+//side-nav left
+.left-links{
+    transform: rotate(-90deg);
+    display:flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 45%;
+    left: -55px;
+}
+
+.left-links span {
+    padding: 4px 0 8px 10px;
+    font-size: 22px;
+    color: $primary-color;
+    font-family: $font-primary-reg;
+}
+
+#copyright {
+    fill: $primary-color;
+    height: 50px;
+    width: 50px;
+    padding-right: 10px;
+}
+
+//side-nav right 
+
+.logo-small {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    bottom: 31%;
+    right: 10px;
+}
+
+.right-links{
+    transform: rotate(-90deg);
+    display:flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 48%;
+    right: -28px;
+}
+
+.social-links  {
+    height: 60px;
+    width: 60px;
+    padding: 10px 10px 0;
+    fill: $primary-color;
+}
+
+.cls-1 {
+    fill: $primary-color;
+    stroke-width:0.75px;
+}
+.cls-1,
+.cls-2 {
+    stroke: $primary-color;
+    stroke-linejoin: round;
+}
+.cls-2 {
+    fill: none;
+}
+
+
+//navigation
+
 
 #navigation-logo,
 #navigation-link {
@@ -81,7 +147,7 @@ html {
     font-size: 175px;
     text-decoration: none;
     margin-right: 45%;
-    font-family: "DolceVita", sans-serif;
+    font-family: $font-primary-reg;
     line-height: 120px;
     text-align:right;
 }
