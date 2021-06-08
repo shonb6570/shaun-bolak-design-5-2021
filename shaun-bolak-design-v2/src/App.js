@@ -19,9 +19,9 @@ class App extends Component {
    return (
     <React.Fragment>
       <NavigationBar />
-      <LeftLinks />
-      <RightLinks />
       <Layout>
+        <LeftLinks />
+        <RightLinks />
       
         <Router>
           <Switch>

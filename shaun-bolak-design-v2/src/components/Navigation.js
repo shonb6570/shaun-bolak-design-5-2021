@@ -13,9 +13,7 @@ export const NavigationBar = () => (
             <Navbar.Brand id="navigation-logo" href="#home">
                 <img
                     src={ Logo }
-                    width="275"
-                    height="60"
-                    className="d-inline-block align-top"
+                    className="d-inline-block align-top nav-logo"
                     alt="shaun bolak design logo"
                 />
             </Navbar.Brand>
