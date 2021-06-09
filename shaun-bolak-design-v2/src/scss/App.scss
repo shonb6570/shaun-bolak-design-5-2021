@@ -83,26 +83,47 @@ html {
 }
 
 //side-nav left
-@media (max-width: 767px) {
+@media (max-width: 575px) {
 	.left-links {
-		top: 590px;
+		top: 585px;
+		left: 50px;
+	}
+}
+
+@media (min-width: 576px) {
+	.left-links {
+		top: 703px;
 		left: 50px;
 	}
 }
 
 @media (min-width: 768px) {
 	.left-links {
-		transform: rotate(-90deg);
-		top: 74vh;
-		right: -96px;
-		height: 50px;
-		width: 300px;
+		top: 640px;
+		height: 40px;
+		left: 25px;
+	}
+}
+
+@media (min-width: 992px) {
+	.left-links {
+		top: 700px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.left-links {
+		top: 900px;
 	}
 }
 
 @media (min-width: 1600px) {
 	.left-links {
-		top: 40vh;
+		transform: rotate(-90deg);
+		top: 695px;
+		left: -87px;
+		height: 50px;
+		width: 300px;
 	}
 }
 
@@ -121,9 +142,10 @@ html {
 	height: 23px;
 	width: 20px;
 	padding-right: 5px;
+	padding-top: 0;
 	@include for-size(tablet-landscape) {
-		height: 50px;
-		width: 50px;
+		height: 40px;
+		width: 40px;
 		padding-right: 8px;
 	}
 }
@@ -141,11 +163,19 @@ html {
 		height: 90px;
 		width: 90px;
 		position: absolute;
-		bottom: 5%;
+		top: 645px;
 		right: 10px;
 	}
+	@include for-size(desktop) {
+		top: 705px;
+		right: 10px;
+	}
+	@include for-size(lg-desktop) {
+		top: 910px;
+		bottom: 0;
+	}
 	@include for-size(xlg-desktop) {
-		top: 54vh;
+		top: 540px;
 		bottom: 0;
 	}
 }
@@ -157,13 +187,24 @@ html {
 	top: 510px;
 	left: 10px;
 	transform: rotate(-90deg);
+	@include for-size(tablet-portrait) {
+		top: 625px;
+	}
 	@include for-size(tablet-landscape) {
-		top: 85%;
-		left: -20px;
+		top: 680px;
+		transform: rotate(0deg);
+		left: 23px;
+	}
+	@include for-size(desktop) {
+		top: 740px;
+	}
+	@include for-size(lg-desktop) {
+		top: 940px;
 	}
 	@include for-size(xlg-desktop) {
-		top: 45%;
-		left: -40px;
+		transform: rotate(-90deg);
+		top: 460px;
+		left: 0px;
 	}
 }
 
@@ -173,6 +214,11 @@ html {
 	padding-right: 8px;
 	fill: $primary-color;
 	@include for-size(tablet-landscape) {
+		padding: 5px 5px 5px 0;
+		height: 40px;
+		width: 40px;
+	}
+	@include for-size(xlg-landscape) {
 		padding: 10px 10px 0;
 		height: 60px;
 		width: 60px;
@@ -220,13 +266,12 @@ html {
 .home-bg-img {
 	background-image: url('../assets/bg-img2.svg');
 	background-color: #000000;
-	width: 100%;
+	width: 100vw;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover !important;
-
-	@include for-size(tablet-landscape) {
-		margin-top: 14vh;
+	@include for-size(tablet-portrait) {
+		margin-top: 50px;
 	}
 
 	@include for-size(lg-desktop) {
@@ -242,21 +287,45 @@ html {
 }
 
 //home links
+
+.hero-wrapper {
+	max-width: inherit;
+	@include for-size(desktop) {
+	}
+	@include for-size(lg-desktop) {
+	}
+	@include for-size(xlg-desktop) {
+	}
+	@include for-size(xxlg-desktop) {
+		max-width: 1400px !important;
+	}
+}
+
 .hero-link-container {
 	display: flex;
 	flex-direction: column;
 	height: 550px;
-	@include for-size(tablet-landscape) {
+	@include for-size(tablet-portrait) {
 		display: flex;
 		flex-direction: column;
-		height: 40vh;
+		height: 620px;
+	}
+	@include for-size(tablet-landscape) {
+		height: 500px;
+	}
+	@include for-size(desktop) {
+		height: 550px;
 	}
 	@include for-size(lg-desktop) {
-		height: 50vh;
+		height: 725px;
+		padding-left: 45px;
+	}
+	@include for-size(xlg-desktop) {
+		height: 680px;
 	}
 	@include for-size(xxlg-desktop) {
-		height: 60vh;
-		margin-left: 40vw !important;
+		height: 810px;
+		width: fit-content;
 	}
 }
 
@@ -265,6 +334,10 @@ html {
 	text-decoration: none;
 	font-family: $font-primary-reg;
 	line-height: 50px;
+	@include for-size(tablet-portrait) {
+		font-size: 6rem;
+		line-height: 66px;
+	}
 
 	@include for-size(tablet-landscape) {
 		font-size: 7rem;
@@ -308,7 +381,7 @@ html {
 		letter-spacing: -1.5px;
 	}
 	@include for-size(xxlg-desktop) {
-		padding-left: 65px;
+		padding-left: 146px;
 		margin-top: 85px;
 		letter-spacing: -9.5px;
 	}
@@ -327,7 +400,7 @@ html {
 		letter-spacing: -2.8px;
 	}
 	@include for-size(xxlg-desktop) {
-		padding-left: 58px;
+		padding-left: 139px;
 		letter-spacing: -14px;
 	}
 }
@@ -339,7 +412,7 @@ html {
 		letter-spacing: 0;
 	}
 	@include for-size(xxlg-desktop) {
-		padding-left: 57px;
+		padding-left: 138px;
 		letter-spacing: -6px;
 	}
 }
@@ -374,6 +447,26 @@ html {
 	&:hover {
 		text-decoration: none;
 		color: $primary-color;
+	}
+}
+
+//quote
+
+.quote-container {
+	display: none;
+
+	@include for-size(lg-desktop) {
+		display: flex;
+		font-size: 20px;
+		color: white;
+		border: 4px solid red;
+		position: absolute;
+		right: 5%;
+		top: 475px;
+		width: 300px;
+		height: 100px;
+	}
+	@include for-size(xxlg-desktop) {
 	}
 }
 
