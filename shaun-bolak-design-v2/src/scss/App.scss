@@ -19,15 +19,27 @@
 		url('../fonts/dolce_vita/Dolce-Vita-Heavy-Bold.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: 'Jacob_and_Son_Regular';
+	src: url('../fonts/jacob_and_son/Jacob-and-son.woff') format('woff'),
+		 url('../fonts/jacob_and_son/Jacob-and-son.woff2') format('woff2'),
+		 url('../fonts/jacob_and_son/Jacob-and-son.ttf') format('truetype');
+	font-weight: regular;
+	font-style: normal;
+
+}
+
 // variables
 
 $primary-color: #c9ad75;
+$primary-color-dark: #7B5D20;
 
 //fonts
 
 $font-primary-reg: 'DolceVita', sans-serif;
 $font-primary-thin: 'DolceVitaLight', sans-serif;
 $font-primary-bold: 'DolceVitaBold', sans-serif;
+$font-secondary: 'Jacob_and_Son_Regular', sans-serif;
 
 //media queries
 
@@ -82,6 +94,63 @@ html {
 	position: absolute;
 }
 
+.dropcap {
+	color: $primary-color-dark;
+	font-size: 6rem;
+	margin-right:  -16px;
+	@include for-size(lg-desktop) {
+		font-size: 8rem;
+	}
+	@include for-size(xlg-desktop) {
+		font-size: 9rem;
+	}
+}
+
+.about-copy-title{
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+	line-height: 50px;
+	@include for-size(tablet-landscape) {
+		font-size: 3.2rem;
+	}
+	@include for-size(desktop) {
+		font-size: 4rem;
+	}
+	@include for-size(lg-desktop) {
+		font-size: 4.8rem;
+		line-height: 65px;
+		padding-left: 50px;
+	}
+	@include for-size(xlg-desktop) {
+		font-size: 5.5rem;
+		line-height: 75px;
+	}
+} 
+
+.about-copy-1,
+.about-copy-2{
+	font-size: 1.1rem;
+	@include for-size(lg-desktop) {
+		font-size: 1.6rem;
+		padding-left: 50px;
+	}
+	@include for-size(xlg-desktop) {
+		font-size: 1.8rem;
+	}
+} 
+
+.hero-link,
+.left-links span,
+.title-primary,
+#navigation-link,
+.left-links-content span  {
+	font-family: $font-primary-reg;
+}
+
+.copy-primary  {
+	font-family: $font-secondary;
+}
+
 //side-nav left
 @media (max-width: 575px) {
 	.left-links {
@@ -131,7 +200,6 @@ html {
 	padding: 0;
 	font-size: 16px;
 	color: $primary-color;
-	font-family: $font-primary-reg;
 	@include for-size(tablet-landscape) {
 		font-size: 22px;
 		padding: 8px 0 8px 0px;
@@ -154,7 +222,7 @@ html {
 	fill: $primary-color;
 }
 
-//side-nav right
+//side-nav right (home page)
 
 .logo-small {
 	display: none;
@@ -245,6 +313,10 @@ html {
 	color: $primary-color;
 }
 
+#navigation-link{
+	font-size: 1.6rem;
+}
+
 #navigation-bar {
 	background-color: black;
 	border-bottom: 2px solid $primary-color;
@@ -278,10 +350,9 @@ html {
 		margin-top: 70px;
 	}
 	@include for-size(xlg-desktop) {
-		margin-top: 200px;
+		margin-top: 100px;
 	}
 	@include for-size(xlg-desktop) {
-		margin-top: 150px;
 		background-size: 100% 768px;
 	}
 }
@@ -332,7 +403,6 @@ html {
 .hero-link {
 	font-size: 4.5rem;
 	text-decoration: none;
-	font-family: $font-primary-reg;
 	line-height: 50px;
 	@include for-size(tablet-portrait) {
 		font-size: 6rem;
@@ -452,24 +522,257 @@ html {
 
 //quote
 
-.quote-container {
-	display: none;
+// .quote-container {
+// 	display: none;
 
-	@include for-size(lg-desktop) {
-		display: flex;
-		font-size: 20px;
-		color: white;
-		border: 4px solid red;
-		position: absolute;
-		right: 5%;
-		top: 475px;
-		width: 300px;
-		height: 100px;
+// 	@include for-size(lg-desktop) {
+// 		display: flex;
+// 		font-size: 20px;
+// 		color: white;
+// 		border: 4px solid red;
+// 		position: absolute;
+// 		right: 5%;
+// 		top: 475px;
+// 		width: 300px;
+// 		height: 100px;
+// 	}
+// 	@include for-size(xxlg-desktop) {
+// 	}
+// }
+
+
+//about styles
+
+
+.about-header-bg{
+	background: url(../assets/about-header.svg) no-repeat !important;
+	background-size: 500px 120px !important;
+	height: 110px;
+	margin-top: 50px;
+	@include for-size(tablet-landscape) {
+		display: none;
 	}
-	@include for-size(xxlg-desktop) {
+} 
+
+.about-title-svg{
+	width: 200px;
+	margin-bottom: 40px;
+	margin-top: -10px;
+	@include for-size(tablet-landscape) {
+		margin-bottom:-80px;
+		width: 140px;
+		margin-top: 0px;
+	}
+} 
+.copy-primary,
+.title-primary {
+	color: white;
+}
+.about-copy-wrapper{
+	@include for-size(tablet-landscape) {
+		margin-top: 150px;
+	}
+} 
+.about-copy-container{
+	max-width: 400px;
+	@include for-size(lg-desktop) {
+		max-width: 580px;
+	}
+	@include for-size(xlg-desktop) {
+		max-width: 600px;
 	}
 }
 
+.about-title{
+	margin-top: 50px;
+	@include for-size(tablet-landscape) {
+		margin-top: 0px;
+	}
+	@include for-size(lg-desktop) {
+		padding-left: 50px;
+	}
+} 
+.about-copy-1{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	@include for-size(desktop) {
+		margin-top: 50px;
+	}
+} 
+.about-copy-2{
+	margin-top: 0px;
+} 
+
+.about-copy-title{
+	margin-bottom: 0px;
+	@include for-size(desktop) {
+		margin-top: 50px;
+	}
+} 
+.about-photo-mobile {
+	margin-bottom: 40px;
+	max-width: 440px;
+	@include for-size(tablet-landscape) {
+		display: none;
+	}
+}
+
+.about-bg {
+	@include for-size(tablet-landscape) {
+		background-image: url('../assets/about-bg-2.svg');
+		background-color: #000000;
+		width: 100vw;
+		height: 580px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size:contain;
+		display: flex;
+	}
+	@include for-size(desktop) {
+		height: 700px;
+	}
+	@include for-size(lg-desktop) {
+		height: 800px;
+	}
+	@include for-size(xlg-desktop) {
+		height: 900px;
+	}
+}
+
+//side-nav right (content page)
+
+.logo-small-content {
+	display: none;
+	@include for-size(tablet-landscape) {
+		display: flex;
+		height: 90px;
+		width: 90px;
+		position: absolute;
+		top: 645px;
+		right: 10px;
+	}
+	@include for-size(desktop) {
+		top: 705px;
+		right: 10px;
+	}
+	@include for-size(lg-desktop) {
+		top: 910px;
+		bottom: 0;
+	}
+	@include for-size(xlg-desktop) {
+		top: 540px;
+		bottom: 0;
+	}
+}
+
+.right-links-content-page {
+	display: block;
+	flex-direction: row;
+	@include for-size(tablet-landscape) {
+		display: flex;
+		position: absolute;
+		top: 680px;
+		transform: rotate(0deg);
+		left: 50px;
+	}
+	@include for-size(desktop) {
+		top: 810px;
+	}
+	@include for-size(lg-desktop) {
+		top: 940px;
+		left: 100px;
+
+	}
+	@include for-size(xlg-desktop) {
+		top: 510px;
+		left: 10px;
+		transform: rotate(-90deg);
+		top: 460px;
+		left: 0px;
+	}
+}
+
+.social-links-content-page {
+	height: 35px;
+	width: 35px;
+	padding-right: 8px;
+	fill: $primary-color;
+	@include for-size(tablet-landscape) {
+		padding: 5px 5px 5px 0;
+		height: 40px;
+		width: 40px;
+	}
+	@include for-size(xlg-landscape) {
+		padding: 10px 10px 0;
+		height: 60px;
+		width: 60px;
+	}
+}
+
+//side-nav left (content pages)
+.left-links-content {
+ margin-top: 80px;
+}
+
+@media (min-width: 768px) {
+	.left-links-content {
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		top: 640px;
+		height: 40px;
+		left: 50px;
+	}
+}
+
+@media (min-width: 992px) {
+	.left-links-content {
+		top: 770px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.left-links-content {
+		top: 900px;
+		left: 100px;
+	}
+}
+
+@media (min-width: 1600px) {
+	.left-links-content {
+		transform: rotate(-90deg);
+		top: 695px;
+		left: -87px;
+		height: 50px;
+		width: 300px;
+	}
+}
+
+.left-links-content span {
+	padding: 0;
+	font-size: 16px;
+	color: $primary-color;
+	@include for-size(tablet-landscape) {
+		font-size: 22px;
+		padding: 8px 0 8px 0px;
+	}
+}
+
+#copyrightContent {
+	fill: $primary-color;
+}
+
+#copyrightSVGContent {
+	height: 23px;
+	width: 20px;
+	padding-right: 5px;
+	padding-top: 0;
+	@include for-size(tablet-landscape) {
+		height: 40px;
+		width: 40px;
+		padding-right: 8px;
+	}
+}
 //footer styles
 
 .footer {

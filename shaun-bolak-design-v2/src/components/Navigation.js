@@ -10,7 +10,7 @@ export const NavigationBar = () => (
     
         <Navbar sticky="top" id="navigation-bar" expand="lg">
         <Container>
-            <Navbar.Brand id="navigation-logo" href="#home">
+            <Navbar.Brand id="navigation-logo" href="/">
                 <img
                     src={ Logo }
                     className="d-inline-block align-top nav-logo"

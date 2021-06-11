@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/App.scss';
 import { NavigationBar } from './components/Navigation';
-import { LeftLinks } from './components/LeftSideBar';
-import { RightLinks } from './components/RightSideBar';
 import { Layout } from './components/Layout';
 import { Home } from './Home';
 import { About } from './About';
@@ -19,13 +17,10 @@ class App extends Component {
    return (
     <React.Fragment>
       <NavigationBar />
-      <Layout>
-        <LeftLinks />
-        <RightLinks />
-      
+      <Layout>      
         <Router>
           <Switch>
-
+          
             <Route exact path='/' component={ Home } />
             <Route path='/about' component={ About } />
             <Route path='/work' component={ Work } />
