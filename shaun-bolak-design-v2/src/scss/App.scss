@@ -22,17 +22,33 @@
 @font-face {
 	font-family: 'Jacob_and_Son_Regular';
 	src: url('../fonts/jacob_and_son/Jacob-and-son.woff') format('woff'),
-		 url('../fonts/jacob_and_son/Jacob-and-son.woff2') format('woff2'),
-		 url('../fonts/jacob_and_son/Jacob-and-son.ttf') format('truetype');
+		url('../fonts/jacob_and_son/Jacob-and-son.woff2') format('woff2'),
+		url('../fonts/jacob_and_son/Jacob-and-son.ttf') format('truetype');
 	font-weight: regular;
 	font-style: normal;
-
 }
 
 // variables
 
 $primary-color: #c9ad75;
-$primary-color-dark: #7B5D20;
+$primary-color-dark: #7b5d20;
+
+/* ============================================= */
+/*         Descriptive colors                    */
+/* ============================================= */
+
+$white: rgb(255, 255, 255);
+$guardsman-red: #d00005;
+$cyan: rgb(0, 232, 249);
+$aqua: rgba(0, 249, 249, 0.578);
+$black-lighter: rgba(0, 0, 0, 0.5);
+
+//awesomeCo logo
+
+$awesomeco-logo-main-path-color: $white;
+$awesomeco-logo-main-fill: $guardsman-red;
+$projects-BG-color: $aqua;
+$projects-BG-mobile-color: $cyan;
 
 //fonts
 
@@ -97,7 +113,7 @@ html {
 .dropcap {
 	color: $primary-color-dark;
 	font-size: 6rem;
-	margin-right:  -16px;
+	margin-right: -16px;
 	@include for-size(lg-desktop) {
 		font-size: 8rem;
 	}
@@ -106,7 +122,7 @@ html {
 	}
 }
 
-.about-copy-title{
+.about-copy-title {
 	font-size: 2.5rem;
 	margin-bottom: 20px;
 	line-height: 50px;
@@ -125,10 +141,10 @@ html {
 		font-size: 5.5rem;
 		line-height: 75px;
 	}
-} 
+}
 
 .about-copy-1,
-.about-copy-2{
+.about-copy-2 {
 	font-size: 1.1rem;
 	@include for-size(lg-desktop) {
 		font-size: 1.6rem;
@@ -137,17 +153,17 @@ html {
 	@include for-size(xlg-desktop) {
 		font-size: 1.8rem;
 	}
-} 
+}
 
 .hero-link,
 .left-links span,
 .title-primary,
 #navigation-link,
-.left-links-content span  {
+.left-links-content span {
 	font-family: $font-primary-reg;
 }
 
-.copy-primary  {
+.copy-primary {
 	font-family: $font-secondary;
 }
 
@@ -313,7 +329,7 @@ html {
 	color: $primary-color;
 }
 
-#navigation-link{
+#navigation-link {
 	font-size: 1.6rem;
 }
 
@@ -540,11 +556,9 @@ html {
 // 	}
 // }
 
-
 //about styles
 
-
-.about-header-bg{
+.about-header-bg {
 	background: url(../assets/about-header.svg) no-repeat !important;
 	background-size: 500px 120px !important;
 	height: 110px;
@@ -552,28 +566,28 @@ html {
 	@include for-size(tablet-landscape) {
 		display: none;
 	}
-} 
+}
 
-.about-title-svg{
+.about-title-svg {
 	width: 200px;
 	margin-bottom: 40px;
 	margin-top: -10px;
 	@include for-size(tablet-landscape) {
-		margin-bottom:-80px;
+		margin-bottom: -80px;
 		width: 140px;
 		margin-top: 0px;
 	}
-} 
+}
 .copy-primary,
 .title-primary {
 	color: white;
 }
-.about-copy-wrapper{
+.about-copy-wrapper {
 	@include for-size(tablet-landscape) {
 		margin-top: 150px;
 	}
-} 
-.about-copy-container{
+}
+.about-copy-container {
 	max-width: 400px;
 	@include for-size(lg-desktop) {
 		max-width: 580px;
@@ -583,7 +597,7 @@ html {
 	}
 }
 
-.about-title{
+.about-title {
 	margin-top: 50px;
 	@include for-size(tablet-landscape) {
 		margin-top: 0px;
@@ -591,24 +605,24 @@ html {
 	@include for-size(lg-desktop) {
 		padding-left: 50px;
 	}
-} 
-.about-copy-1{
+}
+.about-copy-1 {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	@include for-size(desktop) {
 		margin-top: 50px;
 	}
-} 
-.about-copy-2{
+}
+.about-copy-2 {
 	margin-top: 0px;
-} 
+}
 
-.about-copy-title{
+.about-copy-title {
 	margin-bottom: 0px;
 	@include for-size(desktop) {
 		margin-top: 50px;
 	}
-} 
+}
 .about-photo-mobile {
 	margin-bottom: 40px;
 	max-width: 440px;
@@ -625,7 +639,7 @@ html {
 		height: 580px;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-size:contain;
+		background-size: contain;
 		display: flex;
 	}
 	@include for-size(desktop) {
@@ -639,6 +653,39 @@ html {
 	}
 }
 
+//design styles
+
+.design-header-bg {
+	background: url(../assets/design-header.svg) no-repeat !important;
+	background-size: 500px 120px !important;
+	height: 110px;
+	margin-top: 50px;
+	@include for-size(tablet-landscape) {
+		display: none;
+	}
+}
+
+.design-title-svg {
+	width: 200px;
+	margin-bottom: 40px;
+	margin-top: -10px;
+	@include for-size(tablet-landscape) {
+		margin-bottom: -80px;
+		width: 140px;
+		margin-top: 0px;
+	}
+}
+
+.design-title {
+	margin-top: 50px;
+	@include for-size(tablet-landscape) {
+		margin-top: 0px;
+	}
+	@include for-size(lg-desktop) {
+		padding-left: 50px;
+	}
+}
+
 //side-nav right (content page)
 
 .logo-small-content {
@@ -648,20 +695,19 @@ html {
 		height: 90px;
 		width: 90px;
 		position: absolute;
-		top: 645px;
+		top: 675px;
 		right: 10px;
 	}
 	@include for-size(desktop) {
-		top: 705px;
-		right: 10px;
+		top: 815px;
+		right: 5vw;
 	}
 	@include for-size(lg-desktop) {
-		top: 910px;
-		bottom: 0;
+		top: 945px;
 	}
 	@include for-size(xlg-desktop) {
 		top: 540px;
-		bottom: 0;
+		right: 1vw;
 	}
 }
 
@@ -681,7 +727,6 @@ html {
 	@include for-size(lg-desktop) {
 		top: 940px;
 		left: 100px;
-
 	}
 	@include for-size(xlg-desktop) {
 		top: 510px;
@@ -711,7 +756,7 @@ html {
 
 //side-nav left (content pages)
 .left-links-content {
- margin-top: 80px;
+	margin-top: 80px;
 }
 
 @media (min-width: 768px) {
@@ -741,7 +786,7 @@ html {
 @media (min-width: 1600px) {
 	.left-links-content {
 		transform: rotate(-90deg);
-		top: 695px;
+		top: 650px;
 		left: -87px;
 		height: 50px;
 		width: 300px;
@@ -792,4 +837,104 @@ html {
 	padding: 10px;
 	height: 10px;
 	width: 100%;
+}
+
+// ==========================================================================
+// Projects Section Styles
+// ==========================================================================
+
+//looped videos for project examples
+.gif {
+	border: 1px solid white;
+	border-radius: 5px;
+	background: linear-gradient(to top, rgba(255, 255, 255, 0.872), #000);
+	width: 350px;
+	// max-width: 100%;
+	height: 300px;
+	@include for-size(tablet-landscape) {
+		width: 500px;
+	}
+}
+
+.gif-container {
+	position: relative;
+	@include for-size(desktop) {
+		padding-right: 80px;
+	}
+}
+
+/* ============================================= */
+/*          AwesomeCo                            */
+/* ============================================= */
+
+#logo {
+	height: 150px;
+	width: 350px;
+}
+
+#logoFill {
+	fill: $awesomeco-logo-main-fill;
+	stroke: $awesomeco-logo-main-fill;
+}
+
+.logo-stroke {
+	stroke: $awesomeco-logo-main-path-color;
+	stroke-width: 1;
+	fill: $awesomeco-logo-main-path-color;
+}
+
+#awesomeCoCopy {
+	color: $white;
+}
+
+/* ============================================= */
+/*         overlay                          */
+/* ============================================= */
+
+.overlay {
+	position: absolute;
+	bottom: 100%;
+	right: 0;
+	background-color: $black-lighter;
+	overflow: hidden;
+	width: 100%;
+	height: 0%;
+	transition: 0.6s ease;
+
+	@include for-size(desktop) {
+		left: -30px;
+		margin-left: 5%;
+		width: 505px;
+	}
+}
+
+.hov:hover .overlay {
+	bottom: 0;
+	height: 100%;
+	margin-bottom: 5px;
+}
+
+/* ============================================= */
+/*         overlay link styles                   */
+/* ============================================= */
+
+.linkHR {
+	border: 0;
+	clear: both;
+	display: block;
+	height: 25px;
+	width: 2px;
+	margin: 9px 10px;
+}
+
+.link-container {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
