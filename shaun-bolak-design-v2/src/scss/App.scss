@@ -42,6 +42,9 @@ $guardsman-red: #d00005;
 $cyan: rgb(0, 232, 249);
 $aqua: rgba(0, 249, 249, 0.578);
 $black-lighter: rgba(0, 0, 0, 0.5);
+$supernova: #ffc600;
+$sunset-orange: #f74646;
+$flush-mahogany: #cd3a3a;
 
 //awesomeCo logo
 
@@ -49,6 +52,13 @@ $awesomeco-logo-main-path-color: $white;
 $awesomeco-logo-main-fill: $guardsman-red;
 $projects-BG-color: $aqua;
 $projects-BG-mobile-color: $cyan;
+
+//drumspace logo
+$drumspace-logo-main-color: $supernova;
+
+//drumspace logo
+$circles-logo-primary: $sunset-orange;
+$circles-logo-primary-darker: $flush-mahogany;
 
 //fonts
 
@@ -89,6 +99,26 @@ $font-secondary: 'Jacob_and_Son_Regular', sans-serif;
 			@content;
 		}
 	}
+}
+//drumSpace logo
+.logo-stroke {
+	stroke: $awesomeco-logo-main-path-color;
+	stroke-width: 1;
+	fill: $awesomeco-logo-main-path-color;
+}
+
+//drumSpace logo
+#drumSpaceLogo path {
+	stroke: $drumspace-logo-main-color;
+	stroke-width: 0.25;
+	fill: $drumspace-logo-main-color;
+}
+
+//circles logo
+
+.circles-Logo-Font {
+	fill: $circles-logo-primary;
+	stroke: $circles-logo-primary-darker;
 }
 
 //animations
@@ -155,16 +185,27 @@ html {
 	}
 }
 
+.project-copy {
+	font-size: 1.3rem;
+	line-height: 25px;
+}
+
 .hero-link,
 .left-links span,
 .title-primary,
 #navigation-link,
-.left-links-content span {
+.left-links-content span,
+.sub-heading {
 	font-family: $font-primary-reg;
 }
 
-.copy-primary {
+.copy-primary,
+.project-copy {
 	font-family: $font-secondary;
+}
+
+#badgeFont {
+	font-family: $font-primary-bold;
 }
 
 //side-nav left
@@ -536,26 +577,6 @@ html {
 	}
 }
 
-//quote
-
-// .quote-container {
-// 	display: none;
-
-// 	@include for-size(lg-desktop) {
-// 		display: flex;
-// 		font-size: 20px;
-// 		color: white;
-// 		border: 4px solid red;
-// 		position: absolute;
-// 		right: 5%;
-// 		top: 475px;
-// 		width: 300px;
-// 		height: 100px;
-// 	}
-// 	@include for-size(xxlg-desktop) {
-// 	}
-// }
-
 //about styles
 
 .about-header-bg {
@@ -655,6 +676,10 @@ html {
 
 //design styles
 
+.design-page-wrapper {
+	position: relative;
+}
+
 .design-header-bg {
 	background: url(../assets/design-header.svg) no-repeat !important;
 	background-size: 500px 120px !important;
@@ -667,12 +692,19 @@ html {
 
 .design-title-svg {
 	width: 200px;
-	margin-bottom: 40px;
+	margin-bottom: 80px;
 	margin-top: -10px;
+	margin-left: 20px;
 	@include for-size(tablet-landscape) {
 		margin-bottom: -80px;
 		width: 140px;
 		margin-top: 0px;
+	}
+	@include for-size(desktop) {
+		margin-bottom: 70px;
+		width: 180px;
+		margin-top: 100px;
+		margin-left: 0px;
 	}
 }
 
@@ -686,6 +718,93 @@ html {
 	}
 }
 
+//projects
+
+.project-examples {
+	display: flex;
+	flex-direction: column;
+	@include for-size(desktop) {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+// Individual project :before/:after element styles
+
+#awesomeCoCopy::after,
+#drumSpaceCopy::after,
+#dataAnalyticsCopy::after,
+#styleGuideCopy::after,
+#fsc2020Copy::after,
+#lightBoxCopy::after {
+	@include for-size(desktop) {
+		content: '';
+		position: absolute;
+		top: 16%;
+		width: 80%;
+		height: 79%;
+		z-index: 0;
+		background: linear-gradient(to right, $projects-BG-color, #000, #000);
+	}
+}
+
+#awesomeCoCopy::after,
+#drumSpaceCopy::after,
+#dataAnalyticsCopy::after {
+	-webkit-transform: skew(-14deg);
+	-ms-transform: skew(-14deg);
+	transform: skew(-14deg);
+}
+
+// projects div chevron slanting left
+#styleGuideCopy::after,
+#fsc2020Copy::after,
+#lightBoxCopy::after {
+	-webkit-transform: skew(11deg);
+	-ms-transform: skew(11deg);
+	transform: skew(11deg);
+}
+
+#awesomeCoCopy:after {
+	left: 410px;
+}
+
+#drumSpaceCopy::after {
+	left: 240px;
+	@include for-size(desktop) {
+		left: 300px;
+	}
+}
+
+#dataAnalyticsCopy::after {
+	left: 60px;
+	@include for-size(desktop) {
+		left: 190px;
+	}
+}
+
+// projects div chevron slanting right
+#styleGuideCopy::after {
+	left: 60px;
+	@include for-size(desktop) {
+		left: 190px;
+	}
+}
+
+#fsc2020Copy::after {
+	left: 240px;
+	@include for-size(desktop) {
+		left: 300px;
+	}
+}
+
+#lightBoxCopy::after {
+	left: 410px;
+	@include for-size(desktop) {
+		left: 390px;
+	}
+}
+
 //side-nav right (content page)
 
 .logo-small-content {
@@ -695,7 +814,7 @@ html {
 		height: 90px;
 		width: 90px;
 		position: absolute;
-		top: 675px;
+		bottom: 20px;
 		right: 10px;
 	}
 	@include for-size(desktop) {
@@ -717,7 +836,7 @@ html {
 	@include for-size(tablet-landscape) {
 		display: flex;
 		position: absolute;
-		top: 680px;
+		bottom: 60px;
 		transform: rotate(0deg);
 		left: 50px;
 	}
@@ -764,7 +883,7 @@ html {
 		display: flex;
 		flex-direction: row;
 		position: absolute;
-		top: 640px;
+		bottom: 20px;
 		height: 40px;
 		left: 50px;
 	}
@@ -818,26 +937,6 @@ html {
 		padding-right: 8px;
 	}
 }
-//footer styles
-
-.footer {
-	background-color: $primary-color;
-	border-top: 1px solid #e7e7e7;
-	text-align: center;
-	padding: 10px;
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	height: 10px;
-	width: 100%;
-}
-
-.phantom {
-	display: block;
-	padding: 10px;
-	height: 10px;
-	width: 100%;
-}
 
 // ==========================================================================
 // Projects Section Styles
@@ -860,7 +959,15 @@ html {
 	position: relative;
 	@include for-size(desktop) {
 		padding-right: 80px;
+		padding-top: 30px;
 	}
+}
+
+.sub-heading,
+.project-copy,
+#drumSpaceLogo {
+	position: relative;
+	z-index: 1;
 }
 
 /* ============================================= */
@@ -883,12 +990,58 @@ html {
 	fill: $awesomeco-logo-main-path-color;
 }
 
-#awesomeCoCopy {
+#awesomeCoCopy,
+#drumSpaceCopy,
+#dataAnalyticsCopy,
+#styleGuideCopy,
+#fsc2020Copy {
+	position: relative;
 	color: $white;
+	@include for-size(desktop) {
+		max-width: 525px;
+	}
 }
 
 /* ============================================= */
-/*         overlay                          */
+/*          drumspace logo                       */
+/* ============================================= */
+
+#drumSpaceLogo {
+	height: 200px;
+	width: 350px;
+}
+
+/* ============================================= */
+/*          circles logo                         */
+/* ============================================= */
+
+#circlesLogo {
+	margin-top: 20px;
+	height: 150px;
+	padding-left: 20px;
+}
+
+/* ============================================= */
+/*          FSC2020 logo                         */
+/* ============================================= */
+
+#fsc2020logo {
+	width: 80%;
+	margin-top: 20px;
+	@include for-size(desktop) {
+		width: 100%;
+	}
+	@include for-size(desktop) {
+		width: 60%;
+	}
+}
+
+.circleRed {
+	fill: #ce3427;
+}
+
+/* ============================================= */
+/*         overlay                               */
 /* ============================================= */
 
 .overlay {
@@ -937,4 +1090,26 @@ html {
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	text-align: center;
+}
+
+//footer styles
+
+.footer {
+	background-color: $primary-color;
+	border-top: 1px solid #e7e7e7;
+	text-align: center;
+	padding: 10px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 10px;
+	width: 100%;
+	z-index: 100;
+}
+
+.phantom {
+	display: block;
+	padding: 10px;
+	height: 10px;
+	width: 100%;
 }
