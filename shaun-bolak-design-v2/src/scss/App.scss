@@ -818,11 +818,8 @@ html {
 		right: 10px;
 	}
 	@include for-size(desktop) {
-		top: 815px;
+		bottom: 20px;
 		right: 5vw;
-	}
-	@include for-size(lg-desktop) {
-		top: 945px;
 	}
 	@include for-size(xlg-desktop) {
 		top: 540px;
@@ -833,19 +830,12 @@ html {
 .right-links-content-page {
 	display: block;
 	flex-direction: row;
-	@include for-size(tablet-landscape) {
+	@include for-size(desktop) {
 		display: flex;
 		position: absolute;
 		bottom: 60px;
 		transform: rotate(0deg);
 		left: 50px;
-	}
-	@include for-size(desktop) {
-		top: 810px;
-	}
-	@include for-size(lg-desktop) {
-		top: 940px;
-		left: 100px;
 	}
 	@include for-size(xlg-desktop) {
 		top: 510px;
@@ -878,27 +868,12 @@ html {
 	margin-top: 80px;
 }
 
-@media (min-width: 768px) {
-	.left-links-content {
-		display: flex;
-		flex-direction: row;
-		position: absolute;
-		bottom: 20px;
-		height: 40px;
-		left: 50px;
-	}
-}
 
 @media (min-width: 992px) {
 	.left-links-content {
-		top: 770px;
-	}
-}
-
-@media (min-width: 1200px) {
-	.left-links-content {
-		top: 900px;
-		left: 100px;
+		position: absolute;
+		bottom: 20px;
+		left: 50px;
 	}
 }
 
