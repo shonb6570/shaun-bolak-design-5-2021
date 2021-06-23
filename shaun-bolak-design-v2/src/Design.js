@@ -4,12 +4,14 @@ import designTitle from './assets/design-title.svg';
 import { ProjectOne } from './components/ProjectOne';
 import { ProjectTwo } from './components/ProjectTwo';
 import { ProjectThree } from './components/ProjectThree';
+import { ProjectFour } from './components/ProjectFour';
+import { ProjectFive } from './components/ProjectFive';
 import { LeftLinksContent } from './components/LeftSideBarContent';
 import { RightLinksContent } from './components/RightSideBarContent';
 
 export const Design = () => {
     return (
-        <Container fluid>
+        <Container fluid className="design-container">
 
             <div className="design-page-wrapper">
 
@@ -33,14 +35,16 @@ export const Design = () => {
                     <ProjectOne />
                     <ProjectTwo />
                     <ProjectThree />
+                    <ProjectFour />
+                    <ProjectFive />
 
                     {/* /PROJECTS section */}
 
                 </Container>
                 
-                <LeftLinksContent />
-                <RightLinksContent />
             </div>
+            <LeftLinksContent />
+            <RightLinksContent />
         </Container>
     )
 }

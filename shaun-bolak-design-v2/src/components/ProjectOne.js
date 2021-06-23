@@ -18,7 +18,7 @@ export const ProjectOne = () => {
                                         {/* <!-- overlay links --> */}
                                             <div className="overlay text-center">
                                                 <div className="link-container">
-                                                    <a href="links/awesomeCo/index.html" target="_blank">
+                                                    <a href="./links/awesomeCo/index.html" target="_blank">
                                                         <p className="project-links">See it Live</p>
                                                     </a>
 

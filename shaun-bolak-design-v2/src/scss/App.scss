@@ -50,8 +50,7 @@ $flush-mahogany: #cd3a3a;
 
 $awesomeco-logo-main-path-color: $white;
 $awesomeco-logo-main-fill: $guardsman-red;
-$projects-BG-color: $aqua;
-$projects-BG-mobile-color: $cyan;
+$projects-BG-color: $primary-color;
 
 //drumspace logo
 $drumspace-logo-main-color: $supernova;
@@ -100,7 +99,7 @@ $font-secondary: 'Jacob_and_Son_Regular', sans-serif;
 		}
 	}
 }
-//drumSpace logo
+//awesomeCo logo
 .logo-stroke {
 	stroke: $awesomeco-logo-main-path-color;
 	stroke-width: 1;
@@ -114,12 +113,87 @@ $font-secondary: 'Jacob_and_Son_Regular', sans-serif;
 	fill: $drumspace-logo-main-color;
 }
 
+//dynamic logo
+.dynamic-1{fill:#005da1;}
+.dynamic-2{fill:#00417e;}
+.dynamic-3{fill:#002e58;}
+.dynamic-4{fill:#00213f;}
+.dynamic-5,.cls-8{fill:#31b5ff;}
+.dynamic-6{fill:#0092f3;}
+.dynamic-7{fill:none;stroke:#fff;stroke-width:0.6px;}
+.dynamic-7,.cls-8{stroke-miterlimit:10;}
+.dynamic-8{stroke:#31b5ff;stroke-width:0.6px;}
+
+
 //circles logo
 
 .circles-Logo-Font {
 	fill: $circles-logo-primary;
 	stroke: $circles-logo-primary-darker;
 }
+.circles-cls-4{
+	fill: none;
+	stroke: #565656;
+	stroke-width: 3px;
+	stroke-miterlimit: 10;
+}
+
+//fsc2020 logo
+.fsc2020-1,
+.fsc2020-2 {
+	fill: #fff;
+}
+.fsc2020-2,
+.fsc2020-3 {
+	stroke: #cfd1d2;
+}
+.fsc2020-2,
+.fsc2020-3,
+.fsc2020-4,
+.fsc2020-5,
+.fsc2020-6,
+.fsc2020-8,
+.fsc2020-9 {
+	stroke-miterlimit: 10;
+}
+.fsc2020-3,
+.fsc2020-4,
+.fsc2020-5,
+.fsc2020-6,
+.fsc2020-8,
+.fsc2020-9 {
+	fill: none;
+}
+.fsc2020-3 {
+	stroke-width: 0.75px;
+}
+.fsc2020-4 {
+	stroke: #4ad5ed;
+}
+.fsc2020-4,
+.fsc2020-5,
+.fsc2020-6 {
+	stroke-width: 4px;
+}
+.fsc2020-5 {
+	stroke: #4aed99;
+}
+.fsc2020-6,
+.fsc2020-8 {
+	stroke: #ed4865;
+}
+.fsc2020-7 {
+	fill: #4ad5ed;
+}
+.fsc2020-8,
+.fsc2020-9 {
+	stroke-width: 0.5px;
+}
+.fsc2020-9 {
+	stroke: #221f1f;
+}
+
+
 
 //animations
 
@@ -246,7 +320,7 @@ html {
 @media (min-width: 1600px) {
 	.left-links {
 		transform: rotate(-90deg);
-		top: 695px;
+		top: 650px;
 		left: -87px;
 		height: 50px;
 		width: 300px;
@@ -676,6 +750,10 @@ html {
 
 //design styles
 
+.design-container {
+	position: relative;
+}
+
 .design-page-wrapper {
 	position: relative;
 }
@@ -727,6 +805,10 @@ html {
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
+}
+
+.project-examples:last-child {
+	margin-bottom: 200px;
 }
 
 // Individual project :before/:after element styles
@@ -818,11 +900,12 @@ html {
 		right: 10px;
 	}
 	@include for-size(desktop) {
-		bottom: 20px;
+		bottom: 0px;
 		right: 5vw;
 	}
 	@include for-size(xlg-desktop) {
-		top: 540px;
+		position: fixed;
+		bottom: 45vh;
 		right: 1vw;
 	}
 }
@@ -832,17 +915,14 @@ html {
 	flex-direction: row;
 	@include for-size(desktop) {
 		display: flex;
-		position: absolute;
-		bottom: 60px;
-		transform: rotate(0deg);
-		left: 50px;
+		margin-bottom: 60px;
+		margin-left: 50px;
 	}
 	@include for-size(xlg-desktop) {
-		top: 510px;
-		left: 10px;
+		position: fixed;
+		bottom: 60vh;
+		left: -5px;
 		transform: rotate(-90deg);
-		top: 460px;
-		left: 0px;
 	}
 }
 
@@ -871,16 +951,16 @@ html {
 
 @media (min-width: 992px) {
 	.left-links-content {
-		position: absolute;
-		bottom: 20px;
-		left: 50px;
+		margin-bottom: 5px;
+		margin-left: 50px;
 	}
 }
 
 @media (min-width: 1600px) {
 	.left-links-content {
+		position: fixed;
 		transform: rotate(-90deg);
-		top: 650px;
+		bottom: 36vh;
 		left: -87px;
 		height: 50px;
 		width: 300px;
@@ -940,7 +1020,10 @@ html {
 
 .sub-heading,
 .project-copy,
-#drumSpaceLogo {
+#drumSpaceLogo,
+#dynamicLogo,
+#circlesLogo,
+#fsc2020logo {
 	position: relative;
 	z-index: 1;
 }
@@ -984,6 +1067,17 @@ html {
 #drumSpaceLogo {
 	height: 200px;
 	width: 350px;
+}
+
+/* ============================================= */
+/*          dynamicAnalytics logo                */
+/* ============================================= */
+
+#dynamicLogo {
+	height: 125px;
+    width: 275px;
+    margin-bottom: 40px;
+    margin-top: 50px;
 }
 
 /* ============================================= */
