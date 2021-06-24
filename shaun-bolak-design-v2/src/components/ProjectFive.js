@@ -248,10 +248,10 @@ export const ProjectFive = () => {
 							<h3 className="sub-heading">
 								Full Stack Conf 2020 Site with Registration Form
 								<br />
-								<Badge pill variant="warning" id="badgeFont" className="mr-2 mt-4 mb-1">Bootstrap</Badge>
-								<Badge pill variant="warning" id="badgeFont" className="mr-2 mb-1">Sass</Badge>
-								<Badge pill variant="warning" id="badgeFont" className="mr-2 mb-1">SVG Graphics</Badge>
-								<Badge pill variant="warning" id="badgeFont" className="mb-2">Forms</Badge>
+								<Badge pill id="badgeFont" className="mr-2 mt-4 mb-1">Bootstrap</Badge>
+								<Badge pill id="badgeFont" className="mr-2 mb-1">Sass</Badge>
+								<Badge pill id="badgeFont" className="mr-2 mb-1">SVG Graphics</Badge>
+								<Badge pill id="badgeFont" className="mb-2">Forms</Badge>
 							</h3>
 
 							<p className="copy project-copy">

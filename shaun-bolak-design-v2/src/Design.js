@@ -15,10 +15,6 @@ export const Design = () => {
 
             <div className="design-page-wrapper">
 
-                <Container fluid>
-                    <div className="design-header-bg"></div>
-                </Container>
-
                 <Container>
                         <div className="design-title">
                             <img

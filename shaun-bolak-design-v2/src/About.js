@@ -11,9 +11,9 @@ export const About = () => {
 
             <div className="about-page-wrapper">
 
-                <Container fluid>
+                {/* <Container fluid>
                     <div className="about-header-bg"></div>
-                </Container>
+                </Container> */}
 
                 <Container>
                         <div className="about-title">

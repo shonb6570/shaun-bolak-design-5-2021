@@ -86,9 +86,9 @@ export const ProjectTwo = () => {
                         </svg>
                         <h3 className="sub-heading">
                             Pure JavaScript Drum Machine <br />
-                            <Badge pill variant="warning" id="badgeFont" className="mr-2 mt-4 mb-1">JavaScript</Badge>
-                            <Badge pill variant="warning" id="badgeFont" className="mr-2 mb-1">Sass</Badge>
-                            <Badge pill variant="warning" id="badgeFont" className="mb-2">SVG Animation</Badge>
+                            <Badge pill id="badgeFont" className="mr-2 mt-4 mb-1">JavaScript</Badge>
+                            <Badge pill id="badgeFont" className="mr-2 mb-1">Sass</Badge>
+                            <Badge pill id="badgeFont" className="mb-2">SVG Animation</Badge>
                         </h3>
                         <p className="project-copy">
                             A pure Javascript drum machine, with background video, SVG

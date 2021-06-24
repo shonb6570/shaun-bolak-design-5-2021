@@ -70,12 +70,12 @@ export const ProjectThree = () => {
                 </svg>
                     <h3 className="sub-heading">
                         Detailed User Data Analytics <br />
-                        <Badge pill variant="warning" id="badgeFont" className="mr-2 mt-4 mb-1">JS Plugins</Badge>
-                        <Badge pill variant="warning" id="badgeFont" className="mr-2 mb-1">JavaScript</Badge>
-                        <Badge pill variant="warning" id="badgeFont" className="mr-2 mb-1">Fetch</Badge>
-                        <Badge pill variant="warning" id="badgeFont" className="mr-2 mb-1">CSS Grid</Badge>
-                        <Badge pill variant="warning" id="badgeFont" className="mr-2 mb-1">SVG Graphics</Badge>
-                        <Badge pill variant="warning" id="badgeFont" className="mb-2">Sass</Badge>
+                        <Badge pill id="badgeFont" className="mr-2 mt-4 mb-1">JS Plugins</Badge>
+                        <Badge pill id="badgeFont" className="mr-2 mb-1">JavaScript</Badge>
+                        <Badge pill id="badgeFont" className="mr-2 mb-1">Fetch</Badge>
+                        <Badge pill id="badgeFont" className="mr-2 mb-1">CSS Grid</Badge>
+                        <Badge pill id="badgeFont" className="mr-2 mb-1">SVG Graphics</Badge>
+                        <Badge pill id="badgeFont" className="mb-2">Sass</Badge>
                     </h3>
                     <p className="project-copy">
                         An interactive dashboard data analytics example using advanced

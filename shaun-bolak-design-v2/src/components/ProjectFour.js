@@ -126,9 +126,9 @@ export const ProjectFour = () => {
                             </svg>
                             <h3 className="mb-4 sub-heading">
                                 Brand Style Guide <br />
-                                <Badge pill variant="warning" id="badgeFont" className="mr-2 mt-4 mb-1">CSS Grid</Badge>
-                                <Badge pill variant="warning" id="badgeFont" className="mr-2 mb-1">Sass</Badge>
-                                <Badge pill variant="warning" id="badgeFont" className="mb-2">SVG Graphics</Badge>
+                                <Badge pill id="badgeFont" className="mr-2 mt-4 mb-1">CSS Grid</Badge>
+                                <Badge pill id="badgeFont" className="mr-2 mb-1">Sass</Badge>
+                                <Badge pill id="badgeFont" className="mb-2">SVG Graphics</Badge>
                             </h3>
                             <p className="copy project-copy">
                                 This is a brand style guide for Circles, created with CSS grid
