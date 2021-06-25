@@ -116,16 +116,38 @@ $font-secondary: 'Jacob_and_Son_Regular', sans-serif;
 }
 
 //dynamic logo
-.dynamic-1{fill:#005da1;}
-.dynamic-2{fill:#00417e;}
-.dynamic-3{fill:#002e58;}
-.dynamic-4{fill:#00213f;}
-.dynamic-5,.cls-8{fill:#31b5ff;}
-.dynamic-6{fill:#0092f3;}
-.dynamic-7{fill:none;stroke:#fff;stroke-width:0.6px;}
-.dynamic-7,.cls-8{stroke-miterlimit:10;}
-.dynamic-8{stroke:#31b5ff;stroke-width:0.6px;}
-
+.dynamic-1 {
+	fill: #005da1;
+}
+.dynamic-2 {
+	fill: #00417e;
+}
+.dynamic-3 {
+	fill: #002e58;
+}
+.dynamic-4 {
+	fill: #00213f;
+}
+.dynamic-5,
+.cls-8 {
+	fill: #31b5ff;
+}
+.dynamic-6 {
+	fill: #0092f3;
+}
+.dynamic-7 {
+	fill: none;
+	stroke: #fff;
+	stroke-width: 0.6px;
+}
+.dynamic-7,
+.cls-8 {
+	stroke-miterlimit: 10;
+}
+.dynamic-8 {
+	stroke: #31b5ff;
+	stroke-width: 0.6px;
+}
 
 //circles logo
 
@@ -133,7 +155,7 @@ $font-secondary: 'Jacob_and_Son_Regular', sans-serif;
 	fill: $circles-logo-primary;
 	stroke: $circles-logo-primary-darker;
 }
-.circles-cls-4{
+.circles-cls-4 {
 	fill: none;
 	stroke: #565656;
 	stroke-width: 3px;
@@ -195,10 +217,13 @@ $font-secondary: 'Jacob_and_Son_Regular', sans-serif;
 	stroke: #221f1f;
 }
 
-//work base colors 
+//work base colors
 
 .work-heading {
 	color: $white;
+	@include for-size(desktop) {
+		font-size: 28px;
+	}
 }
 
 //animations
@@ -221,7 +246,15 @@ html {
 	color: $white;
 	width: 100%;
 	height: 45px;
-	margin-top: 15px;
+	margin-top: 10px;
+	@include for-size(desktop) {
+		height: 35px;
+		margin-top: 5px;
+	}
+	@include for-size(lg-desktop) {
+		height: 45px;
+		margin-top: 10px;
+	}
 }
 
 .btns:focus {
@@ -230,7 +263,7 @@ html {
 
 .btns:hover {
 	background-color: $primary-color;
-	transition: all .5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
 .left-links {
@@ -308,6 +341,13 @@ html {
 	font-family: $font-primary-bold;
 	border: 4px solid $primary-color;
 	border-radius: 0 !important;
+	color: $white;
+	@include for-size(desktop) {
+		font-size: 16px;
+	}
+	@include for-size(lg-desktop) {
+		font-size: 20px;
+	}
 }
 
 //side-nav left
@@ -967,7 +1007,6 @@ html {
 	margin-top: 80px;
 }
 
-
 @media (min-width: 992px) {
 	.left-links-content {
 		margin-bottom: 5px;
@@ -1094,9 +1133,9 @@ html {
 
 #dynamicLogo {
 	height: 125px;
-    width: 275px;
-    margin-bottom: 40px;
-    margin-top: 50px;
+	width: 275px;
+	margin-bottom: 40px;
+	margin-top: 50px;
 }
 
 /* ============================================= */
@@ -1180,15 +1219,14 @@ html {
 	text-align: center;
 }
 
-
 /* ============================================= */
 /*         Work Section styles                   */
 /* ============================================= */
 
-.work-container{
+.work-container {
 	margin-top: 20px;
 }
-.work-one{
+.work-one {
 	margin-top: 80px;
 	@include for-size(desktop) {
 		margin-top: 50px;
@@ -1199,36 +1237,121 @@ html {
 	margin-top: 60px;
 }
 
-.work-one,
-.work-projects {
+.work-one {
 	@include for-size(desktop) {
-		background: center / contain no-repeat url("../assets/work-one-bg.svg");
-		height: 475px;
+		background: center / contain no-repeat url('../assets/hsf-work-bg.png');
 	}
 }
 
-#HSF {
+.work-two {
 	@include for-size(desktop) {
-		width: 450px;
+		background: center / contain no-repeat url('../assets/four-hire-bg.png');
+	}
+}
+
+.work-three {
+	@include for-size(desktop) {
+		background: center / contain no-repeat url('../assets/writer-access-bg.png');
+		background-size: auto 328px;
+	}
+	@include for-size(lg-desktop) {
+		background-size: auto 412px;
+	}
+}
+
+.work-four {
+	@include for-size(desktop) {
+		background: center / contain no-repeat url('../assets/library-bg.png');
+	}
+}
+
+#HSF,
+#fourHire,
+#writerAccess,
+#carribeanGen {
+	width: 100%;
+
+	@include for-size(desktop) {
+		width: 320px;
 		padding-left: 50px;
+		height: 295px;
+	}
+	@include for-size(lg-desktop) {
+		width: 382px;
+		padding-left: 50px;
+		height: 370px;
+	}
+}
+
+.hsf-logo {
+	width: 150px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	@include for-size(desktop) {
+		width: 105px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	@include for-size(lg-desktop) {
+		width: 130px;
+		margin-bottom: 15px;
+		margin-top: 15px;
+	}
+}
+
+.four-hire-logo {
+	width: 200px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	@include for-size(desktop) {
+		width: 130px;
+		margin-bottom: 10px;
+		margin-top: 20px;
+	}
+	@include for-size(lg-desktop) {
+		width: 200px;
+		margin-bottom: 30px;
 	}
 }
 
 .writer-access-logo {
-	width: 300px;
-	margin-bottom: 30px;
+	width: 200px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	@include for-size(desktop) {
+		width: 200px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	@include for-size(lg-desktop) {
+		width: 300px;
+		margin-bottom: 30px;
+	}
 }
 
+.library-logo {
+	width: 200px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	@include for-size(desktop) {
+		width: 310px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	@include for-size(lg-desktop) {
+		width: 100px;
+		margin-bottom: 15px;
+	}
+}
 
 /* ============================================= */
 /*         Contact styles                        */
 /* ============================================= */
 .contact-copy {
-
 	color: $white;
 	font-family: $font-primary-bold;
-    font-size: 3.5rem;
-    line-height: 70px;
+	font-size: 3.5rem;
+	line-height: 70px;
 	margin-top: 60px;
 }
 
@@ -1236,14 +1359,12 @@ html {
 	display: flex;
 	width: 100%;
 	flex-shrink: 0;
-    flex-grow: 1;
+	flex-grow: 1;
 }
-
 
 /* ============================================= */
 /*         Footer styles                         */
 /* ============================================= */
-
 
 .footer {
 	background-color: $primary-color;
