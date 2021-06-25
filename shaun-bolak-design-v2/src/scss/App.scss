@@ -1270,6 +1270,11 @@ html {
 #writerAccess,
 #carribeanGen {
 	width: 100%;
+	@include for-size(desktop) {
+		width: 320px;
+		padding-left: 50px;
+		height: 295px;
+	}
 
 	@include for-size(desktop) {
 		width: 320px;
