@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Badge from 'react-bootstrap/Badge';
-import CarribeanLogo from '../assets/library-logo.svg'
+import CarribeanLogo from '../assets/library-logo.png'
 
 
 export const WorkFour = () => {

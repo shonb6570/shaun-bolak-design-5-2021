@@ -7,6 +7,7 @@ import { Layout } from './components/Layout';
 import { Home } from './Home';
 import { About } from './About';
 import { Work } from './Work';
+import { HSF } from './HSF';
 import { Design } from './Design';
 import { Contact } from './Contact';
 import { FourOFour } from './FourOFour';
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path='/' component={ Home } />
             <Route path='/about' component={ About } />
             <Route path='/work' component={ Work } />
+            <Route path='/hsf' component={ HSF } />
             <Route path='/design' component={ Design } />
             <Route path='/contact' component={ Contact } />
             <Route component={ FourOFour} />
