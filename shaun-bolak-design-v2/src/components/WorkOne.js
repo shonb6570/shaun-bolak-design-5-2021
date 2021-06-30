@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Badge from 'react-bootstrap/Badge';
 import HSFLogo from '../assets/HSF-logo.png';
+import { Link } from 'react-router-dom';
 
 
 export const WorkOne = () => {
@@ -20,7 +21,7 @@ export const WorkOne = () => {
                                         <Badge pill id="badgeFont" className="mr-2 mb-1">JavaScript</Badge>
                                         <Badge pill id="badgeFont" className="mb-2">SVG Animation</Badge>
                                     </h3>
-                                    <button className="btns">View Project</button>
+                                    <button className="btns"><Link to="/hsf" className="work-link">View Project</Link></button>
                                 </div>
                             </div>
                         {/* <!-- /first project (user database)--> */}
