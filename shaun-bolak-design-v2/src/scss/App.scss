@@ -395,9 +395,19 @@ html {
 .hsf-typography-headline {
 	font-size: 2.4rem;
 	line-height: 45px;
+	@include for-size(desktop) {
+		line-height: 54px;
+		padding-left: 40px;
+		font-size: 3rem;
+	}
 }
 .hsf-typography-body {
 	font-size: 1rem;
+	margin-top: 20px;
+	@include for-size(desktop) {
+		padding-left: 40px;
+		font-size: 1.2rem;
+	}
 }
 
 #badgeFont {
@@ -1445,8 +1455,18 @@ html {
 		height: 80vh;
 	}
 	@include for-size(desktop) {
-		background: no-repeat url('../assets/hero-main-img-min.jpg');
-		background-position: left -475px top -30px;
+		background-position: left -300px top -30px;
+		background-size: 135%;
+	}
+	@include for-size(lg-desktop) {
+		background-position: left -97px top -4px;
+    	background-size: 110%;
+		height: 90vh;
+	}
+	@include for-size(xlg-desktop) {
+		background-position: left -97px top -4px;
+    	background-size: 110%;
+		height: 81vh;
 	}
 }
 
@@ -1454,6 +1474,10 @@ html {
 	width: 100%;
 	margin-top: -250px;
 	margin-bottom: -250px;
+	@include for-size(xlg-desktop) {
+		margin-top: -500px;
+		margin-bottom: -400px;
+	}
 }
 
 .hsf-hero-content {
@@ -1469,16 +1493,42 @@ html {
 	border-top: 8px solid $primary-color;
 	border-left: 8px solid $primary-color;
 	width: 90%;
+	@include for-size(tablet-portrait) {
+		width: 500px;
+	}
+	@include for-size(desktop) {
+		height: 430px;
+		padding: 50px;
+		width: 420px;
+	}
+	@include for-size(xlg-desktop) {
+		width: 550px;
+		height: 630px;
+	}
 }
 
 .hsf-hero-title {
 	width: 100%;
 	font-size: 2rem;
 	line-height: 34px;
+	@include for-size(xlg-desktop) {
+		font-size: 4rem;
+		line-height: 64px;
+	}
 }
 .hsf-hero-copy {
 	font-size: 1rem;
 	margin-top: 30px;
+	@include for-size(xlg-desktop) {
+		font-size: 1.3rem;
+	}
+}
+
+.hsf-copy {
+	@include for-size(xlg-desktop) {
+		font-size: 1.3rem;
+		margin-top: 30px;
+	}
 }
 
 .work-info {
@@ -1498,11 +1548,18 @@ html {
 .info-heading,
 .info-item {
 	font-size: 1rem;
+	@include for-size(xlg-desktop) {
+		font-size: 1.2rem;
+	}
 }
 
 .info-heading {
 	margin-right: auto;
 	width: 100%;
+	margin-bottom: 10px;
+	@include for-size(xlg-desktop) {
+		margin-top: 20px;
+	}
 }
 .info-item {
 	margin-left: 20px;
@@ -1521,18 +1578,109 @@ html {
 }
 
 .hsf-section-three {
-	padding-top: 275px;
+	padding-top: 500px;
+    padding-bottom: 120px;
 	border-top: 8px solid $primary-color;
 }
 .hsf-section-two {
 	background: $concrete;
 	border-bottom: 8px solid $primary-color;
 	height: 500px;
+	@include for-size(xlg-desktop) {
+		height: 1000px;
+	}
 }
 .hsf-section-content {
 	display: flex;
-	flex-direction: column;
-	padding: 40px 20px;
+    flex-direction: column;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+	justify-content: center;
+}
+
+.hsf-content-one,
+.hsf-content-two,
+.hsf-content-three {
+	width: 100%;
+	@include for-size(tablet-landscape) {
+		margin: 0 auto;
+	}
+}
+
+.hsf-content-one {
+	@include for-size(tablet-landscape) {
+		width: 300px;
+	}
+	@include for-size(tablet-landscape) {
+		width: 400px;
+		margin-top: 70px;
+		margin-bottom: 70px;
+	}
+	@include for-size(xlg-desktop) {
+		width: 420px;
+	}
+}
+
+.hsf-content-two {
+	@include for-size(tablet-landscape) {
+		width: 400px;
+	}
+	@include for-size(xlg-desktop) {
+		width: 575px;
+		margin-top: 70px;
+	}
+}
+
+.hsf-content-three {
+	@include for-size(tablet-landscape) {
+		width: 650px;
+	}
+	@include for-size(lg-desktop) {
+		width: 1000px;
+	}
+}
+
+.hsf-content-one-wrapper{
+	display: flex;
+    flex-direction: column;
+	@include for-size(tablet-landscape) {
+		flex-direction: row;
+		
+	}
+}
+
+.hsf-logo-abrev {
+	width: 100px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+	@include for-size(desktop) {
+		margin-top: 0px;
+		width: 120px;
+	} 
+	@include for-size(xlg-desktop) {
+		width: 180px;
+	} 
+}
+.hsf-logo-full {
+	width: 280px;
+	@include for-size(desktop) {
+		width: 100%;
+	} 
+	@include for-size(xlg-desktop) {
+		width: 475px;
+	} 
+	
+}
+
+.hsf-logos-container {
+	@include for-size(tablet-landscape) {
+		padding-left: 40px;
+	} 
+	@include for-size(desktop) {
+		padding-left: 0px;
+		width: 400px;
+	} 
 }
 
 .hsf-title {
@@ -1540,6 +1688,10 @@ html {
 	font-size: 1.8rem;
 	margin-right: auto;
 	line-height: 30px;
+	@include for-size(xlg-desktop) {
+		font-size: 5rem;
+		line-height: 76px;
+	}
 }
 
 .hsf-title-wrapper {
@@ -1548,13 +1700,30 @@ html {
 	border-left: 8px solid $primary-color;
 	padding-left: 10px;
 	margin-bottom: 20px;
+	@include for-size(xlg-desktop) {
+		margin-bottom: 45px;
+		border-left: 10px solid #c9ad75;
+		padding-left: 20px;
+	}
 }
 
 .typography-spacer {
 	padding-left: 10px;
+	@include for-size(desktop) {
+		padding-left: 240px;
+	}
 }
+
+.typography-spacer-two {
+	padding-left: 10px;
+	@include for-size(desktop) {
+		padding-left: 264px;
+	}
+}
+
 .light-underline {
 	border-bottom: 1px solid lightgray;
+	margin-bottom: 5px;
 }
 .hsf-typography-body,
 .hsf-typography-small {
@@ -1567,29 +1736,84 @@ html {
 	display: flex;
 	flex-direction: row;
 	position: relative;
-	height: 510px;
+	height: 570px;
 	border-top: 8px solid $primary-color;
 }
 
 .hsf-typography-xlg {
 	background-color: $mine-shaft;
-	color: $white;
-	font-size: 4rem;
+	width: 45vw;
+	@include for-size(tablet-landscape) {
+		width: 55vw;
+	}
+	@include for-size(desktop) {
+		width: 55vw;
+	}
 }
-.hsf-typography-small {
+
+.hsf-typography-xlg-svg{
+	height: 100%;
+	width: 100%;
+	padding-left: 20px;
+	@include for-size(tablet-landscape) {
+		padding: 40px;
+	}
+	@include for-size(desktop) {
+		padding: 40px 80px;
+	}
+	@include for-size(lg-desktop) {
+		padding: 40px 40px 40px 260px;
+	}
+	@include for-size(xlg-desktop) {
+		padding: 40px 40px 40px 300px;
+	}
+}
+
+.hsf-typography-xlg-svg-path{
+	fill: $white;
+}
+
+.hsf-typography-small-wrapper {
 	position: absolute;
 	bottom: -1px;
 	right: 0;
+	width: 50vw;
+	height: 571px;
 	background-color: $white;
-	color: $mine-shaft;
-	padding: 15px;
+	padding: 0 10px;
 	border-left: 8px solid $primary-color;
 	border-bottom: 8px solid $primary-color;
+	@include for-size(tablet-landscape) {
+		width: 45vw;
+	}
+	@include for-size(xlg-desktop) {
+		border-bottom: none;
+	}
 }
+
+.hsf-typography-small {
+	color: $mine-shaft;
+}
+
 .hsf-typography-small-copy {
 	display: flex;
-	width: 150px;
+	padding-left: 0px;
+	padding-bottom: 12px;
+	width: 100%;
+	font-size: .9rem;
+	@include for-size(tablet-landscape) {
+		width: 290px;
+		font-size: 1rem;
+		padding-left: 60px;
+	}
 }
+
+.info-heading-heebo {
+	@include for-size(tablet-landscape) {
+		padding-left: 60px;
+	}
+}
+
 
 /* ============================================= */
 /*         Contact styles                        */
