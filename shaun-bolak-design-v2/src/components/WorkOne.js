@@ -16,12 +16,12 @@ export const WorkOne = () => {
                                     <img alt="HSF logo" src={ HSFLogo } className="hsf-logo"/>
                                     {/* <!-- /SVG logo --> */}
                                     <h3 className="sub-heading">
-                                        <Badge pill id="badgeFont" className="mr-2 mt-2 mb-1">3rd party API</Badge>
-                                        <Badge pill id="badgeFont" className="mr-2 mb-1">JS Plugins</Badge>
-                                        <Badge pill id="badgeFont" className="mr-2 mb-1">JavaScript</Badge>
-                                        <Badge pill id="badgeFont" className="mb-2">SVG Animation</Badge>
+                                        <Badge pill id="badgeFont" className="mr-2 mt-2 mb-1">Brand Identity</Badge>
+                                        <Badge pill id="badgeFont" className="mr-2 mb-1">Wireframe</Badge>
+                                        <Badge pill id="badgeFont" className="mr-2 mb-1">Custom WP Theme</Badge>
+                                        <Badge pill id="badgeFont" className="mb-2">Logo Design</Badge>
                                     </h3>
-                                    <button className="btns"><Link to="/hsf" className="work-link">View Project</Link></button>
+                                    <Link to="/hsf" className="work-link"><button className="btns">View Project</button></Link>
                                 </div>
                             </div>
                         {/* <!-- /first project (user database)--> */}

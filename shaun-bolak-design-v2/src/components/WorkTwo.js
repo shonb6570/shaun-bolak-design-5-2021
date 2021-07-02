@@ -1,7 +1,8 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Badge from 'react-bootstrap/Badge';
-import FourHireLogo from '../assets/four-hire-logo.svg'
+import FourHireLogo from '../assets/four-hire-logo.svg';
+import { Link } from 'react-router-dom';
 
 
 export const WorkTwo = () => {
@@ -14,12 +15,12 @@ export const WorkTwo = () => {
                                     <img alt="4Hire logo" src={ FourHireLogo } className="four-hire-logo"/>
                                     {/* <!-- /SVG logo --> */}
                                     <h3 className="sub-heading">
-                                        <Badge pill id="badgeFont" className="mr-2 mt-2 mb-1">3rd party API</Badge>
-                                        <Badge pill id="badgeFont" className="mr-2 mb-1">JS Plugins</Badge>
-                                        <Badge pill id="badgeFont" className="mr-2 mb-1">JavaScript</Badge>
-                                        <Badge pill id="badgeFont" className="mb-2">SVG Animation</Badge>
+                                        <Badge pill id="badgeFont" className="mr-2 mt-2 mb-1">Brand Identity</Badge>
+                                        <Badge pill id="badgeFont" className="mr-2 mb-1">Wireframe</Badge>
+                                        <Badge pill id="badgeFont" className="mr-2 mb-1">Logo Design</Badge>
+                                        <Badge pill id="badgeFont" className="mb-2">UX/UI</Badge>
                                     </h3>
-                                    <button className="btns">View Project</button>
+                                    <Link to="/fourhire" className="work-link"><button className="btns">View Project</button></Link>
                                 </div>
                             </div>
                         {/* <!-- /first project (user database)--> */}

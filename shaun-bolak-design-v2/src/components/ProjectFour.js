@@ -17,7 +17,6 @@ export const ProjectFour = () => {
                             <video className="gif" autoPlay muted loop>
                                 <source src={CirclesGif} type="video/mp4" /> ;     
                             </video>
-                        </div>
                         {/* <!-- overlay links --> */}
                         <div className="overlay text-center">
                             <div className="link-container">
@@ -37,6 +36,7 @@ export const ProjectFour = () => {
                             </div>
                         </div>
                         {/* <!-- /overlay links --> */}
+                        </div>
                     </div>
 
                         <div className="col-sm copy styleGuide" id="styleGuideCopy">

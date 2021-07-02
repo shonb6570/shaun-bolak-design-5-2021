@@ -1,30 +1,33 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import HSFSiteImage from './assets/hsf-site-img2.jpg';
-import HSFLogoAbrev from './assets/HSF_Logo_Abbreviated_Light.png';
-import HSFLogoFull from './assets/HSF_Logo_Full_Light.png';
+import FourHireHomeImage from './assets/fourhire-home.jpg';
+import FourHireContentImage from './assets/fourhire-content.jpg';
+import FourHireLogo from './assets/four-hire-logo.png';
+import GradientOne from './assets/gradient1.png';
+import GradientTwo from './assets/gradient2.png';
+import GradientThree from './assets/gradient3.png';
+import GradientFour from './assets/gradient4.png';
 import { LeftLinksContent } from './components/LeftSideBarContent';
 import { RightLinksContent } from './components/RightSideBarContent';
 
-export const HSF = () => {
+export const FourHire = () => {
     return (
         <div id="hsfContainer">
 
             <div className="hsf-page-wrapper">
                 {/* hero/landing page */}
-                <div className="hsf-hero-banner">
-                    <div className="hsf-hero-content work-hero-content">
+                <div className="four-hire-hero-banner">
+                    <div className="work-hero-content">
                         <span className="hsf-hero-title">
-                            Making the world better 
+                            Not your ordinary 
                         </span>
                         <span className="hsf-hero-title">
-                            - one job at a time.
+                            job search site.
                         </span>
                         <span className="hsf-hero-copy work-copy">
-                            I helped Massachusetts-based HSF find their 
-                            identity with a logo and site that represents 
-                            who are as a brand, and the values they 
-                            represent as a non-profit. 
+                            I partnered with the talented Aaron Robinson from DatDesDEv
+                            to create a brand identity, site design and style guide for 
+                            4Hire (the folks behind NannyLane).  The site is still in pre-production. 
                         </span>
                         <div className="work-info">
                             <div className="info-left">
@@ -35,8 +38,8 @@ export const HSF = () => {
                                 <span className="info-heading">Deliverables</span>
                                 <span className="info-item">Brand Identity</span>
                                 <span className="info-item">Wireframe</span>
-                                <span className="info-item">Custom WP Theme</span>
                                 <span className="info-item">Logo Design</span>
+                                <span className="info-item">UX/UI</span>
                             </div>
                         </div>
 
@@ -50,40 +53,62 @@ export const HSF = () => {
                         <div className="content-one">
                             <div className="work-title-wrapper">
                                 <span className="work-title">
-                                    New logo, 
-                                </span>
-                                <span className="work-title">
-                                    new life.
+                                    Oh, those gradients! 
                                 </span>
                             </div>    
                             <span  className="work-copy">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore 
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                                exercitation ullamco laboris nisi ut aliquip ex ea 
-                                commodo consequat.
+                                The folks at 4Hire wanted simply had blue gradient 
+                                that they wanted incorporated into the logo.  Building 
+                                on that, the darkening shades of blue gradients became a 
+                                symbol of 4Hire branding ( and a knockout logo! ).
                             </span> 
                        </div>
-                        <div className="hsf-logos-container">
-                            <div className="content-one">
+                        <div className="four-hire-gradients-container">
+
+                            <div className="four-hire-content-one">
                                     <img
-                                        src={ HSFLogoAbrev }
-                                        className="hsf-logo-abrev"
-                                        alt="hsf logo abbreviated"
+                                        src={ FourHireLogo }
+                                        className="four-hire-logo-style-guide"
+                                        alt="4hire logo"
                                     />
                             </div>
 
-                            <div className="content-one">
+                            <div className="four-hire-content-one">
                                     <img
-                                        src={ HSFLogoFull }
-                                        className="hsf-logo-full"
-                                        alt="hsf logo abbreviated"
+                                        src={ GradientOne }
+                                        className="four-hire-gradient"
+                                        alt="gradient light example"
                                     />
                             </div>
+
+                            <div className="four-hire-content-one">
+                                    <img
+                                        src={ GradientTwo }
+                                        className="four-hire-gradient"
+                                        alt="gradient dark example"
+                                    />
+                            </div>
+
+                            <div className="four-hire-content-one">
+                                    <img
+                                        src={ GradientThree }
+                                        className="four-hire-gradient"
+                                        alt="gradient darker example"
+                                    />
+                            </div>
+
+                            <div className="four-hire-content-one">
+                                    <img
+                                        src={ GradientFour }
+                                        className="four-hire-gradient"
+                                        alt="gradient darkest example"
+                                    />
+                            </div>
+
                         </div>
                     </div>
                 </Container>
-                <Container className="text-left hsf-section-two" fluid="true">
+                <Container className="text-left four-hire-section-two" fluid="true">
                     <div className="section-content">
                         <div className="content-two">
                             <div className="work-title-wrapper">
@@ -105,19 +130,27 @@ export const HSF = () => {
                     </div>
                 </Container>
 
-                <Container>
-                    {/* hsf image */}
-                    <div className="text-center" id="hsf-site-img-wrapper">
+                <Container className="four-hire-imgs-container">
+                    {/* 4hire site images */}
+                    <div className="text-center" id="four-hire-home-img-wrapper">
                         <img
-                            src={ HSFSiteImage }
-                            className="hsf-site-img"
-                            alt="hsf site design"
+                            src={ FourHireHomeImage  }
+                            className="four-hire-home-img"
+                            alt="4Hire home page site design"
                         />
                     </div>
 
-                    {/* /hsf image */}
+                    <div className="text-center" id="four-hire-content-img-wrapper">
+                        <img
+                            src={ FourHireContentImage  }
+                            className="four-hire-content-img"
+                            alt="4Hire content page site design"
+                        />
+                    </div>
+
+                    {/* /4hire site images */}
                 </Container>
-                <Container className="text-left hsf-section-three" fluid="true">
+                <Container className="text-left four-hire-section-three" fluid="true">
                 <div className="section-content">
                         <div className="content-three">
                             <div className="work-title-wrapper">
@@ -132,8 +165,8 @@ export const HSF = () => {
                                 </div>
                                 <div className="typography-headline fira-code">
                                     <span>
-                                        If we live forever, let us 
-                                        live forever tonight.
+                                    I can feel it coming in the air tonight, Oh lord.
+                                    I've been waiting for this moment for all my life.
                                     </span>
                                 </div>
     
@@ -176,9 +209,13 @@ export const HSF = () => {
                         </div>
                         <div className="typography-small-copy heebo mt-3">
                             <span>
-                                Memories and mountain tops. Drunk on Sunset Boulevard.
-                                With the city of angels singing on. Maybe this is just a dream.
-                                And maybe we are still asleep. But I, I will miss you when I'm gone.
+                                Well I remember, I remember don't worry.
+                                How could I ever forget?
+                                It's the first time, the last time we ever met.
+                                But I know the reason why you keep this silence up.
+                                No you don't fool me.
+                                The hurt doesn't show, but the pain still grows.
+                                It's no stranger to you and me.
                             </span>
                         </div>
                         <div className="typography-small-copy heebo mt-3">

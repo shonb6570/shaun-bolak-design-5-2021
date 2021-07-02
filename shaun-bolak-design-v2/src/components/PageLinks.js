@@ -8,10 +8,10 @@ export const PageLinks = () => (
     
         <Container className="hero-wrapper">
             <div className="hero-link-container">
-                <Link className="hero-link" to="/about">About</Link>
-                <Link className="hero-link" to="/work">Work</Link>
-                <Link className="hero-link" to="/design">Design</Link>
-                <Link className="hero-link" to="/contact">Contact</Link>
+                <Link className="hero-link slidetwo" to="/about">About</Link>
+                <Link className="hero-link slidetwo" to="/work">Work</Link>
+                <Link className="hero-link slidetwo" to="/design">Design</Link>
+                <Link className="hero-link slidetwo" to="/contact">Contact</Link>
             </div>
         </Container> 
 )

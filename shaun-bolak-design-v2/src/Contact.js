@@ -11,34 +11,56 @@ export const Contact = () => {
             <div className="Contact-page-wrapper">
 
                 <Container>
-                        <div className="design-title">
-                            <img
-                                src={ ContactTitle }
-                                className="work-title-svg"
-                                alt="Work"
-                            />
+                        <div className="design-title contact-title">
+                            <div className="contact-title-wrapper">
+                                <img
+                                    src={ ContactTitle }
+                                    className="contact-title-svg"
+                                    alt="Contact"
+                                />
+                            </div>
                         </div>
                 </Container>
 
                 <Container>
+                    {/* header image */}
+                    <div className="contact-header"></div>
+                    {/* /header image */}
 
                     {/* <!-- content--> */}
-                    <div className="contact-copy">
-                        <span className="contact-body">
-                            Hello.
-                        </span>
-                        <span className="contact-body"> 
-                            Is it me
-                        </span>
-                        <span className="contact-body"> 
-                            your looking 
-                        </span>
-                        <span className="contact-body"> 
-                            for?
-                        </span>
+                    <div className="contact-container">
+                        <div className="contact-copy">
+                            <span className="contact-body slide">
+                                Hello.
+                            </span>
+                            <span className="contact-body slide"> 
+                                Is it me
+                            </span>
+                            <span className="contact-body slide"> 
+                                your looking 
+                            </span>
+                            <span className="contact-body slide"> 
+                                for?
+                            </span>
+                        </div>
+
+                        <div className="contact-form">
+                            <form action="/action_page.php" method="get" id="form1">
+                                <input className="fade" type="text" id="name" name="name" placeholder="Name"/>
+                                <input className="fade" type="email" id="email" name="email" placeholder="Email"></input>
+                                <label className="subject fade" for="subject">Message</label>
+                                <textarea id="subject" class="fade" name="subject"></textarea>
+                                <button class="btns fade" type="submit" value="Submit" form="form1">Submit</button>
+                            </form>
+                        </div>
+
                     </div>
 
-                    {/*- content */}
+                    {/*- /content */}
+
+                    {/* footer image */}
+                    <div className="contact-footer"></div>
+                    {/* /footer image */}
 
                 </Container>
                 
