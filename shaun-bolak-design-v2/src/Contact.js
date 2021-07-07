@@ -48,9 +48,9 @@ export const Contact = () => {
                             <form action="/action_page.php" method="get" id="form1">
                                 <input className="fade" type="text" id="name" name="name" placeholder="Name"/>
                                 <input className="fade" type="email" id="email" name="email" placeholder="Email"></input>
-                                <label className="subject fade" for="subject">Message</label>
-                                <textarea id="subject" class="fade" name="subject"></textarea>
-                                <button class="btns fade" type="submit" value="Submit" form="form1">Submit</button>
+                                <label className="subject fade" htmlFor="subject">Message</label>
+                                <textarea id="subject" className="fade" name="subject"></textarea>
+                                <button className="btns fade" type="submit" value="Submit" form="form1">Submit</button>
                             </form>
                         </div>
 

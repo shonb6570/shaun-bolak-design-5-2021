@@ -18,25 +18,27 @@ class App extends Component {
  render() {
    return (
     <React.Fragment>
-      <NavigationBar />
-      <Layout>      
-        <Router>
-          <Switch>
-          
-            <Route exact path='/' component={ Home } />
-            <Route path='/about' component={ About } />
-            <Route path='/work' component={ Work } />
-            <Route path='/hsf' component={ HSF } />
-            <Route path='/fourhire' component={ FourHire } />
-            <Route path='/design' component={ Design } />
-            <Route path='/contact' component={ Contact } />
-            <Route component={ FourOFour} />
+        <div className="site-bg">
+          <NavigationBar />
+          <Layout>      
+            <Router>
+              <Switch>
+              
+                <Route exact path='/' component={ Home } />
+                <Route path='/about' component={ About } />
+                <Route path='/work' component={ Work } />
+                <Route path='/hsf' component={ HSF } />
+                <Route path='/fourhire' component={ FourHire } />
+                <Route path='/design' component={ Design } />
+                <Route path='/contact' component={ Contact } />
+                <Route component={ FourOFour} />
 
-          </Switch>
-        </Router>
-      
-      </Layout>
-      <Footer />
+              </Switch>
+            </Router>
+          
+          </Layout>
+          <Footer />
+        </div>
     </React.Fragment> 
    )
  }

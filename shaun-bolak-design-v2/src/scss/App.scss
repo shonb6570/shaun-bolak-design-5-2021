@@ -133,40 +133,69 @@ $hsf-font-secondary: 'Hebo_Regular', sans-serif;
 
 @keyframes slidein {
 	from {
-	  opacity: 0;
-	  letter-spacing: -50px;
+		opacity: 0;
+		letter-spacing: -50px;
 	}
-  
-	to {
-	  opacity: 1;
-	  letter-spacing: 0;
-	}
-  }
 
-  @keyframes slideintwo {
+	to {
+		opacity: 1;
+		letter-spacing: 0;
+	}
+}
+
+@keyframes slideintwo {
 	from {
-	  opacity: 0;
-	  letter-spacing: -75px;
+		opacity: 0;
+		letter-spacing: -75px;
 	}
-  
+
 	to {
-	  opacity: 1;
-	  letter-spacing: 0;
+		opacity: 1;
+		letter-spacing: 0;
 	}
-  }
+}
 
-
-  @keyframes fade {
+@keyframes fade {
 	from {
-	  opacity: 0;
+		opacity: 0;
 	}
-  
+
 	to {
-	  opacity: 1;
+		opacity: 1;
 	}
-  }
+}
 
+@keyframes disappear {
+	0% {
+		width: 100vw;
+		opacity: 1;
+	}
+	99% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		width: 0vw;
+	}
+}
 
+@keyframes transition-one {
+	0% {
+		width: 0vw;
+		opacity: 0.5;
+	}
+
+	50% {
+		width: 100vw;
+	}
+	80% {
+		opacity: 0.5;
+	}
+	100% {
+		width: 0vw;
+		opacity: 0;
+	}
+}
 
 /* ============================================= */
 /*         Typography                            */
@@ -318,6 +347,10 @@ $hsf-font-secondary: 'Hebo_Regular', sans-serif;
 #root,
 html {
 	background-color: $mine-shaft;
+}
+
+.site-bg {
+	background-color: #131313 !important;
 }
 
 #layoutContainer {
@@ -707,7 +740,6 @@ html {
 	}
 	@include for-size(lg-desktop) {
 		height: 725px;
-		padding-left: 45px;
 	}
 	@include for-size(xlg-desktop) {
 		height: 680px;
@@ -723,13 +755,13 @@ html {
 	text-decoration: none;
 	line-height: 50px;
 	@include for-size(tablet-portrait) {
-		font-size: 6rem;
-		line-height: 66px;
+		font-size: 5.5rem;
+		line-height: 60px;
 	}
 
 	@include for-size(tablet-landscape) {
-		font-size: 7rem;
-		line-height: 82px;
+		font-size: 6.2rem;
+		line-height: 66px;
 		display: flex;
 	}
 
@@ -837,15 +869,23 @@ html {
 		color: $primary-color;
 	}
 }
-.slidetwo{
+.slidetwo {
 	animation: 1.5s forwards slideintwo;
 	opacity: 0;
 }
 
-.slidetwo:nth-child(1) { animation-delay: 1s }
-.slidetwo:nth-child(2) { animation-delay: 1.3s }
-.slidetwo:nth-child(3) { animation-delay: 1.6s }
-.slidetwo:nth-child(4) { animation-delay: 2s }
+.slidetwo:nth-child(1) {
+	animation-delay: 1s;
+}
+.slidetwo:nth-child(2) {
+	animation-delay: 1.3s;
+}
+.slidetwo:nth-child(3) {
+	animation-delay: 1.6s;
+}
+.slidetwo:nth-child(4) {
+	animation-delay: 2s;
+}
 
 //about styles
 
@@ -1020,7 +1060,12 @@ html {
 		width: 80%;
 		height: 79%;
 		z-index: 0;
-		background: linear-gradient(to right, $projects-BG-color, $mine-shaft, $mine-shaft);
+		background: linear-gradient(
+			to right,
+			$projects-BG-color,
+			$mine-shaft,
+			$mine-shaft
+		);
 	}
 }
 
@@ -1333,7 +1378,6 @@ html {
 	}
 }
 
-
 /* ============================================= */
 /*         overlay link styles                   */
 /* ============================================= */
@@ -1504,7 +1548,6 @@ html {
 	}
 }
 
-
 .hsf-hero-banner {
 	background: center / cover no-repeat url('../assets/hero-main-img-min.jpg');
 	width: 100%;
@@ -1521,12 +1564,12 @@ html {
 	}
 	@include for-size(lg-desktop) {
 		background-position: left -97px top -4px;
-    	background-size: 110%;
+		background-size: 110%;
 		height: 90vh;
 	}
 	@include for-size(xlg-desktop) {
 		background-position: left -97px top -4px;
-    	background-size: 110%;
+		background-size: 110%;
 		height: 81vh;
 	}
 }
@@ -1597,10 +1640,6 @@ html {
 		font-size: 1.3rem;
 		margin-top: 30px;
 	}
-	@include for-size(xlg-desktop) {
-		font-size: 1.3rem;
-		margin-top: 30px;
-	}
 }
 
 .work-info {
@@ -1653,7 +1692,7 @@ html {
 
 .hsf-section-three {
 	padding-top: 250px;
-    padding-bottom: 0px;
+	padding-bottom: 0px;
 	border-top: 8px solid $primary-color;
 	@include for-size(desktop) {
 		padding-top: 350px;
@@ -1677,10 +1716,10 @@ html {
 }
 .section-content {
 	display: flex;
-    flex-direction: column;
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+	flex-direction: column;
+	padding: 40px 20px;
+	max-width: 1200px;
+	margin: 0 auto;
 	justify-content: center;
 }
 
@@ -1726,46 +1765,44 @@ html {
 	}
 }
 
-.content-one-wrapper{
+.content-one-wrapper {
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 	@include for-size(tablet-landscape) {
 		flex-direction: row;
-		
 	}
 }
 
 .hsf-logo-abrev {
 	width: 100px;
-    margin-bottom: 30px;
-    margin-top: 30px;
+	margin-bottom: 30px;
+	margin-top: 30px;
 	@include for-size(desktop) {
 		margin-top: 0px;
 		width: 120px;
-	} 
+	}
 	@include for-size(xlg-desktop) {
 		width: 180px;
-	} 
+	}
 }
 .hsf-logo-full {
 	width: 280px;
 	@include for-size(desktop) {
 		width: 100%;
-	} 
+	}
 	@include for-size(xlg-desktop) {
 		width: 475px;
-	} 
-	
+	}
 }
 
 .hsf-logos-container {
 	@include for-size(tablet-landscape) {
 		padding-left: 40px;
-	} 
+	}
 	@include for-size(desktop) {
 		padding-left: 0px;
 		width: 400px;
-	} 
+	}
 }
 
 .work-title {
@@ -1840,7 +1877,7 @@ html {
 	}
 }
 
-.typography-xlg-svg{
+.typography-xlg-svg {
 	height: 100%;
 	width: 100%;
 	padding-left: 20px;
@@ -1858,7 +1895,7 @@ html {
 	}
 }
 
-.typography-xlg-svg-path{
+.typography-xlg-svg-path {
 	fill: $white;
 }
 
@@ -1889,7 +1926,7 @@ html {
 	padding-left: 0px;
 	padding-bottom: 12px;
 	width: 100%;
-	font-size: .9rem;
+	font-size: 0.9rem;
 	@include for-size(tablet-landscape) {
 		width: 290px;
 		font-size: 1rem;
@@ -1902,7 +1939,6 @@ html {
 		padding-left: 60px;
 	}
 }
-
 
 /* ============================================= */
 /*         FourHire styles                       */
@@ -1927,15 +1963,15 @@ html {
 	}
 	@include for-size(lg-desktop) {
 		background-position: left -97px top -100px;
-    	background-size: 110%;
+		background-size: 110%;
 	}
 	@include for-size(lg-desktop-wide) {
 		background-position: left -97px top -200px;
-    	background-size: 110%;
+		background-size: 110%;
 	}
 	@include for-size(xlg-desktop) {
 		background-position: cover;
-    	background-size: 100%;
+		background-size: 100%;
 		height: 90vh;
 	}
 }
@@ -1945,11 +1981,11 @@ html {
 	margin-bottom: 20px;
 	@include for-size(tablet-landscape) {
 		padding-left: 40px;
-	} 
+	}
 	@include for-size(desktop) {
 		padding-left: 0px;
 		width: 400px;
-	} 
+	}
 }
 
 .four-hire-logo-style-guide {
@@ -1972,17 +2008,16 @@ html {
 
 .four-hire-gradient {
 	width: 280px;
-    margin-bottom: 0px;
-    margin-top: 15px;
+	margin-bottom: 0px;
+	margin-top: 15px;
 	@include for-size(tablet-landscape) {
 		width: 300px;
 		height: 100px;
 	}
 	@include for-size(xlg-desktop) {
 		width: 450px;
-	} 
+	}
 }
-
 
 .four-hire-imgs-container {
 	min-height: 400px;
@@ -2011,7 +2046,7 @@ html {
 
 .four-hire-section-three {
 	padding-top: 210px;
-    padding-bottom: 0px;
+	padding-bottom: 0px;
 	border-top: 8px solid $primary-color;
 	@include for-size(tablet-landscape) {
 		padding-top: 300px;
@@ -2037,6 +2072,9 @@ html {
 
 .contact-title {
 	display: flex;
+	@include for-size(tablet-landscape) {
+		margin-top: 20px;
+	}
 }
 
 .contact-title-wrapper {
@@ -2072,33 +2110,46 @@ html {
 	}
 }
 
-
 .contact-copy {
 	color: $white;
 	font-family: $font-primary-bold;
 	font-size: 3.5rem;
-	line-height: 70px;
+	line-height: 52px;
 	margin-top: 60px;
 	margin-bottom: 50px;
-	
-	
 	@include for-size(desktop) {
 		font-size: 5rem;
+		line-height: 66px;
 	}
 	@include for-size(lg-desktop) {
 		font-size: 6rem;
 		line-height: 92px;
 	}
+	@include for-size(xlg-desktop) {
+		font-size: 10rem;
+		line-height: 127px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		height: 720px;
+	}
 }
+
 .slide {
 	animation: 1s forwards slidein;
 	opacity: 0;
 }
-.slide:nth-child(1) { animation-delay: 1s }
-.slide:nth-child(2) { animation-delay: 3s }
-.slide:nth-child(3) { animation-delay: 4s }
-.slide:nth-child(4) { animation-delay: 5s }
-
+.slide:nth-child(1) {
+	animation-delay: 1s;
+}
+.slide:nth-child(2) {
+	animation-delay: 3s;
+}
+.slide:nth-child(3) {
+	animation-delay: 4s;
+}
+.slide:nth-child(4) {
+	animation-delay: 5s;
+}
 
 .contact-body {
 	display: flex;
@@ -2152,27 +2203,24 @@ textarea {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-  }
+}
 
-  #subject:hover {
+#subject:hover {
 	border: 2px solid $primary-color;
 	height: 100px;
 	max-height: 10em;
 	resize: both;
-  }
-
+}
 
 #subject {
 	height: 20px;
 }
-
 
 #name,
 #email {
 	margin-bottom: 20px;
 	height: 45px;
 }
-
 
 .fade {
 	animation: 1s 6s forwards fade;
@@ -2181,21 +2229,20 @@ textarea {
 
 label,
 ::placeholder,
-input, 
-select, 
+input,
+select,
 textarea {
-	color: $primary-color; 
+	color: $primary-color;
 	font-family: $font-primary-reg;
 }
 
 label,
 ::placeholder,
-input, 
-select, 
+input,
+select,
 textarea {
 	font-size: 2rem;
 }
-
 
 /* ============================================= */
 /*         Footer styles                         */
@@ -2219,4 +2266,37 @@ textarea {
 	padding: 10px;
 	height: 10px;
 	width: 100%;
+}
+
+/* ============================================= */
+/*         Transition styles                     */
+/* ============================================= */
+.transition-bg {
+	height: 100vh;
+	width: 100vw;
+	opacity: 1;
+	background-color: $mine-shaft;
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	animation: 1.6s disappear;
+	animation-fill-mode: forwards !important;
+}
+
+.transition-container {
+	height: 100vh;
+	width: 0vw;
+	background-color: $primary-color-dark;
+	position: absolute;
+	z-index: 1001;
+	top: 0;
+	right: 0;
+	animation: 1.6s transition-one;
+	animation-fill-mode: forwards !important;
+}
+
+.transition-wrapper {
+	position: relative;
+	background-color: transparent;
 }
