@@ -60,7 +60,7 @@ export const FourHire = () => {
                                 The folks at 4Hire wanted simply had blue gradient 
                                 that they wanted incorporated into the logo.  Building 
                                 on that, the darkening shades of blue gradients became a 
-                                symbol of 4Hire branding ( and a knockout logo! ).
+                                symbol of 4Hire branding ( and a knockout logo ! ).
                             </span> 
                        </div>
                         <div className="four-hire-gradients-container">
@@ -113,18 +113,18 @@ export const FourHire = () => {
                         <div className="content-two">
                             <div className="work-title-wrapper">
                                 <span className="work-title">
-                                    Fresh colors,
+                                    FOR THE PEOPLE,
                                 </span>
                                 <span className="work-title">
-                                    modern design.
+                                    BY THE PEOPLE.
                                 </span>
                             </div> 
                             <span  className="work-copy">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore 
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                                exercitation ullamco laboris nisi ut aliquip ex ea 
-                                commodo consequat.
+                                The team at 4Hire had one tenet in mind when they came to Aaron and I regarding the 
+                                brand - not just another job search site, but site that is specifically tailored for 
+                                regular, down to earth people.  There are plenty of sites catering to executives and CEOs.
+                                The 4Hire brand is not that.  It's a place that is accessible, and that has real jobs in 
+                                the service and labor industries that keep the world running. 
                             </span>
                         </div>
                     </div>
@@ -160,10 +160,10 @@ export const FourHire = () => {
                             </div> 
                                 <div className="info-heading">
                                     <span>
-                                        headline - fira code
+                                        headline - Montserrat Bold
                                     </span>
                                 </div>
-                                <div className="typography-headline fira-code">
+                                <div className="typography-headline montserrat-bold">
                                     <span>
                                     I can feel it coming in the air tonight, Oh lord.
                                     I've been waiting for this moment for all my life.
@@ -171,7 +171,7 @@ export const FourHire = () => {
                                 </div>
     
 
-                                <div className="typography-body fira-code">
+                                <div className="typography-body montserrat">
                                     <div className="light-underline">
                                         <span>ABCDEFGHIJKLMN</span>
                                         <span className="typography-spacer">a</span>
@@ -182,9 +182,9 @@ export const FourHire = () => {
                                         <span className="typography-spacer-two">o</span>
                                         <span>pqrstuvwxyz</span>
                                     </div>
-                                </div>
-                                <div>
-                                    <span className="typography-body fira-code">0123456789-_&%$!"*</span>
+                                    <div>
+                                        <span className="typography-body montserrat">0123456789-_&%$!"*</span>
+                                    </div>
                                 </div>
                             </div>
                     </div>
@@ -203,13 +203,19 @@ export const FourHire = () => {
                     </div>
                     <div className="typography-small-wrapper">
                         <div className="typography-small">
-                            <span className="info-heading info-heading-heebo mt-3">
-                                headline - fira code
+                            <span className="info-heading mt-3">
+                                subheading - raleway medium
+                            </span>
+                            <span className="typography-small-copy raleway-med mt-3">
+                                Well I remember...
                             </span>
                         </div>
-                        <div className="typography-small-copy heebo mt-3">
+                        <span className="info-heading mt-3">
+                                copy - raleway regular
+                        </span>
+                        <div className="typography-small-copy raleway-reg mt-3">
                             <span>
-                                Well I remember, I remember don't worry.
+                                ...I remember don't worry.
                                 How could I ever forget?
                                 It's the first time, the last time we ever met.
                                 But I know the reason why you keep this silence up.
@@ -218,27 +224,27 @@ export const FourHire = () => {
                                 It's no stranger to you and me.
                             </span>
                         </div>
-                        <div className="typography-small-copy heebo mt-3">
+                        <div className="typography-small-copy raleway mt-3">
                             <span>
                                 ABCDEFGHIJKLMN
                             </span>
                         </div>
-                        <div className="typography-small-copy heebo">
+                        <div className="typography-small-copy raleway">
                             <span>
                                 OPQRSTUVWXYZ
                             </span>
                         </div>
-                        <div className="typography-small-copy heebo mt-3">
+                        <div className="typography-small-copy raleway mt-3">
                             <span>
                                 abcdefghijklmn
                             </span>
                         </div>
-                        <div className="typography-small-copy heebo">
+                        <div className="typography-small-copy raleway">
                             <span>
                                 opqrstuvwxyz
                             </span>
                         </div>
-                        <div className="typography-small-copy heebo mt-3">
+                        <div className="typography-small-copy raleway mt-3">
                             <span>
                                 0123456789-_&%$!"*
                             </span>

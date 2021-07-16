@@ -42,7 +42,33 @@
 	src: url('../fonts/heebo/Heebo-Regular.woff2') format('woff2'),
 		url('../fonts/heebo/Heebo-Regular.woff') format('woff'),
 		url('../fonts/heebo/Heebo-Regular.ttf') format('truetype');
-	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Montserrat_Medium';
+	src: url('../fonts/montserrat/Montserrat-Medium.woff2') format('woff2'),
+		url('../fonts/montserrat/Montserrat-Medium.woff') format('woff'),
+		url('../fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Montserrat_Bold';
+	src: url('../fonts/montserrat/Montserrat-Bold.woff2') format('woff2'),
+		url('../fonts/montserrat/Montserrat-Bold.woff') format('woff'),
+		url('../fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'RaleWay_Medium';
+	src: url('../fonts/raleway/Raleway-Medium.woff2') format('woff2'),
+		url('../fonts/raleway/Raleway-Medium.woff') format('woff'),
+		url('../fonts/raleway/Raleway-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'RaleWay_Regular';
+	src: url('../fonts/raleway/Raleway-Regular.woff2') format('woff2'),
+		url('../fonts/raleway/Raleway-Regular.woff') format('woff'),
+		url('../fonts/raleway/Raleway-Regular.ttf') format('truetype');
 }
 
 // variables
@@ -88,6 +114,10 @@ $font-primary-bold: 'DolceVitaBold', sans-serif;
 $font-secondary: 'Jacob_and_Son_Regular', sans-serif;
 $hsf-font-primary: 'Fira_Code', sans-serif;
 $hsf-font-secondary: 'Hebo_Regular', sans-serif;
+$fourhire-font-primary: 'Montserrat_Medium', sans-serif;
+$fourhire-font-primary-bold: 'Montserrat_Bold', sans-serif;
+$fourhire-font-secondary-reg: 'Raleway_Regular', sans-serif;
+$fourhire-font-secondary-medium: 'Raleway_Medium', sans-serif;
 
 //media queries
 
@@ -353,6 +383,12 @@ html {
 	background-color: $mine-shaft !important;
 }
 
+#nav-container{
+	@include for-size(lg-desktop-wide) {
+		max-width: 1320px !important;
+	}
+}
+
 #layoutContainer {
 	padding: 0;
 }
@@ -475,6 +511,22 @@ html {
 
 .heebo {
 	font-family: $hsf-font-secondary;
+}
+
+.montserrat {
+	font-family: $fourhire-font-primary;
+}
+
+.montserrat-bold {
+	font-family: $fourhire-font-primary-bold;
+}
+
+.raleway-reg {
+	font-family: $fourhire-font-secondary-reg;
+}
+
+.info-heading-raleway {
+	font-family: $fourhire-font-secondary-medium;
 }
 
 .typography-headline {
@@ -717,7 +769,6 @@ html {
 //home links
 
 .hero-wrapper {
-	max-width: inherit;
 	@include for-size(desktop) {
 	}
 	@include for-size(lg-desktop) {
@@ -1463,13 +1514,14 @@ html {
 		height: 370px;
 	}
 	@include for-size(lg-desktop-wide) {
-		padding-left: 40px;
-		height: 370px;
 		padding-top: 10px;
+		width: 500px;
+		padding-left: 122px;
 	}
 	@include for-size(xlg-desktop) {
-		width: 450px;
-		height: 370px;
+		padding-top: 10px;
+		width: 500px;
+		padding-left: 122px;
 	}
 }
 
@@ -1757,6 +1809,7 @@ html {
 .content-two {
 	@include for-size(tablet-landscape) {
 		width: 450px;
+		margin-top: 80px;
 	}
 	@include for-size(xlg-desktop) {
 		width: 575px;
@@ -1828,6 +1881,7 @@ html {
 	}
 }
 
+
 .work-title-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -1870,7 +1924,7 @@ html {
 	display: flex;
 	flex-direction: row;
 	position: relative;
-	height: 570px;
+	height: 600px;
 	border-top: 8px solid $primary-color;
 }
 
@@ -1917,7 +1971,7 @@ html {
 	bottom: -1px;
 	right: 0;
 	width: 50vw;
-	height: 571px;
+	height: 601px;
 	background-color: $white;
 	padding: 0 10px;
 	border-left: 8px solid $primary-color;
@@ -2171,68 +2225,32 @@ html {
 	flex-grow: 1;
 }
 
-#form1 {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
+.contact-email,
+.contact-email-label {
+	font-size: 2rem;
+	color: $white;
+ 	font-family: $font-primary-reg;
+	 color: $primary-color;
+	 @include for-size(tablet-landscape) {
+		font-size: 2.2rem;
+	}
+	@include for-size(lg-desktop) {
+		font-size: 2.5rem;
+	}
+	@include for-size(xlg-desktop) {
+		font-size: 3rem;
+	}
 }
 
 .contact-form {
 	@include for-size(tablet-landscape) {
-		width: 268px;
-		margin-left: auto;
-		margin-top: 50px;
-	}
-	@include for-size(desktop) {
-		width: 375px;
-		margin-left: auto;
-		margin-top: auto;
-		margin-bottom: 20px;
-	}
-	@include for-size(lg-desktop) {
-		width: 500px;
-	}
-	@include for-size(xlg-desktop) {
-		width: 600px;
+		margin: auto auto;
 	}
 }
 
-input {
-	border: 0;
-	outline: 0;
-	background: transparent;
-	border-bottom: 2px solid $primary-color;
-}
-
-textarea {
-	outline: 0;
-	background: transparent;
-	border: none;
-	border-bottom: 2px solid $primary-color;
-	height: 20px;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-#subject:hover {
-	border: 2px solid $primary-color;
-	height: 100px;
-	max-height: 10em;
-	resize: both;
-}
-
-#subject {
-	height: 20px;
-}
-
-#name,
-#email {
-	margin-bottom: 20px;
-	height: 45px;
+.contact-email:hover {
+	color: $white;
+	transition: .6s ease-in-out;
 }
 
 .fade {
@@ -2240,22 +2258,88 @@ textarea {
 	opacity: 0;
 }
 
-label,
-::placeholder,
-input,
-select,
-textarea {
-	color: $primary-color;
-	font-family: $font-primary-reg;
-}
+// code for new form
 
-label,
-::placeholder,
-input,
-select,
-textarea {
-	font-size: 2rem;
-}
+// .contact-form {
+// 	@include for-size(tablet-landscape) {
+// 		width: 268px;
+// 		margin-left: auto;
+// 		margin-top: 50px;
+// 	}
+// 	@include for-size(desktop) {
+// 		width: 375px;
+// 		margin-left: auto;
+// 		margin-top: auto;
+// 		margin-bottom: 20px;
+// 	}
+// 	@include for-size(lg-desktop) {
+// 		width: 500px;
+// 	}
+// 	@include for-size(xlg-desktop) {
+// 		width: 600px;
+// 	}
+// }
+
+// #form1 {
+// 	display: flex;
+// 	flex-direction: column;
+// 	width: 100%;
+// }
+
+// input {
+// 	border: 0;
+// 	outline: 0;
+// 	background: transparent;
+// 	border-bottom: 2px solid $primary-color;
+// }
+
+// textarea {
+// 	outline: 0;
+// 	background: transparent;
+// 	border: none;
+// 	border-bottom: 2px solid $primary-color;
+// 	height: 20px;
+// 	-webkit-transition: all 0.3s;
+// 	-o-transition: all 0.3s;
+// 	transition: all 0.3s;
+// 	-webkit-box-sizing: border-box;
+// 	-moz-box-sizing: border-box;
+// 	box-sizing: border-box;
+// }
+
+// #subject:hover {
+// 	border: 2px solid $primary-color;
+// 	height: 100px;
+// 	max-height: 10em;
+// 	resize: both;
+// }
+
+// #subject {
+// 	height: 20px;
+// }
+
+// #name,
+// #email {
+// 	margin-bottom: 20px;
+// 	height: 45px;
+// }
+
+// label,
+// ::placeholder,
+// input,
+// select,
+// textarea {
+// 	color: $primary-color;
+// 	font-family: $font-primary-reg;
+// }
+
+// label,
+// ::placeholder,
+// input,
+// select,
+// textarea {
+// 	font-size: 2rem;
+// }
 
 /* ============================================= */
 /*         Footer styles                         */

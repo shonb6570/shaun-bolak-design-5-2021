@@ -57,11 +57,11 @@ export const HSF = () => {
                                 </span>
                             </div>    
                             <span  className="work-copy">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore 
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                                exercitation ullamco laboris nisi ut aliquip ex ea 
-                                commodo consequat.
+                                We went through multiple iterations of the logo until 
+                                arriving at the version that represents the brand in both image and 
+                                company vision.  The boxes fold and evolve, changing color from lighter 
+                                tints to darker, encapsulating the idea of self-evolution through the training 
+                                and services that HSF offers to it's clients.  
                             </span> 
                        </div>
                         <div className="hsf-logos-container">
@@ -95,11 +95,10 @@ export const HSF = () => {
                                 </span>
                             </div> 
                             <span  className="work-copy">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore 
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                                exercitation ullamco laboris nisi ut aliquip ex ea 
-                                commodo consequat.
+                                Working directly with the team at HSF, we chose fresh, vibrant colors 
+                                that defined both the logo and brand.  These colors translate into the 
+                                background elements, and each page of the site has a modern and coherent 
+                                feel, as a whole.
                             </span>
                         </div>
                     </div>

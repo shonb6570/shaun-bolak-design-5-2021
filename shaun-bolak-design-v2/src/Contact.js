@@ -37,14 +37,16 @@ export const Contact = () => {
                                 Is it me
                             </span>
                             <span className="contact-body slide"> 
-                                your looking 
+                                you're looking 
                             </span>
                             <span className="contact-body slide"> 
                                 for?
                             </span>
                         </div>
 
-                        <div className="contact-form">
+                        {/* new contact form - on hold until later build */}
+
+                        {/* <div className="contact-form">
                             <form action="/action_page.php" method="get" id="form1">
                                 <input className="fade" type="text" id="name" name="name" placeholder="Name"/>
                                 <input className="fade" type="email" id="email" name="email" placeholder="Email"></input>
@@ -52,6 +54,10 @@ export const Contact = () => {
                                 <textarea id="subject" className="fade" name="subject"></textarea>
                                 <button className="btns fade" type="submit" value="Submit" form="form1">Submit</button>
                             </form>
+                        </div> */}
+
+                        <div className="contact-form">
+                            <span className="fade contact-email-label">EMAIL: </span><a href="mailto: shon@shaunbolak.com" className="fade contact-email"> shon@shaunbolak.com</a>
                         </div>
 
                     </div>
