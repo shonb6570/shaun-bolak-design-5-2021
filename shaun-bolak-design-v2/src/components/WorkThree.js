@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Badge from 'react-bootstrap/Badge';
 import WriterAccessLogo from '../assets/wa-logo.png'
+import { Link } from 'react-router-dom';
 
 
 export const WorkThree = () => {
@@ -15,12 +16,12 @@ export const WorkThree = () => {
                                     <img alt="writeraccess logo" src={ WriterAccessLogo } className="writer-access-logo"/>
                                     {/* <!-- /SVG logo --> */}
                                     <h3 className="sub-heading">
-                                        <Badge pill id="badgeFont" className="mr-2 mt-2 mb-1">3rd party API</Badge>
-                                        <Badge pill id="badgeFont" className="mr-2 mb-1">JS Plugins</Badge>
-                                        <Badge pill id="badgeFont" className="mr-2 mb-1">JavaScript</Badge>
-                                        <Badge pill id="badgeFont" className="mb-2">SVG Animation</Badge>
+                                        <Badge pill id="badgeFont" className="mr-2 mt-2 mb-1">Front End Development</Badge>
+                                        <Badge pill id="badgeFont" className="mr-2 mb-1">WordPress</Badge>
+                                        <Badge pill id="badgeFont" className="mr-2 mb-1">Graphic Design</Badge>
+                                        <Badge pill id="badgeFont" className="mb-2">Vector Graphics</Badge>
                                     </h3>
-                                    <button className="btns">View Project</button>
+                                    <Link to="/writeraccess" className="work-link"><button className="btns">View Project</button></Link>
                                 </div>
                             </div>
                         {/* <!-- /first project (user database)--> */}

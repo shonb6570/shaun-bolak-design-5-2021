@@ -9,6 +9,7 @@ import { About } from './About';
 import { Work } from './Work';
 import { HSF } from './HSF';
 import { FourHire } from './FourHire';
+import { WriterAccess } from './WriterAccess';
 import { Design } from './Design';
 import { Contact } from './Contact';
 import { FourOFour } from './FourOFour';
@@ -29,6 +30,7 @@ class App extends Component {
                 <Route path='/work' component={ Work } />
                 <Route path='/hsf' component={ HSF } />
                 <Route path='/fourhire' component={ FourHire } />
+                <Route path='/writeraccess' component={ WriterAccess } />
                 <Route path='/design' component={ Design } />
                 <Route path='/contact' component={ Contact } />
                 <Route component={ FourOFour} />

@@ -37,7 +37,10 @@ export const Contact = () => {
                                 Is it me
                             </span>
                             <span className="contact-body slide"> 
-                                you're looking 
+                                you're  
+                            </span>
+                            <span className="contact-body slide"> 
+                                looking 
                             </span>
                             <span className="contact-body slide"> 
                                 for?

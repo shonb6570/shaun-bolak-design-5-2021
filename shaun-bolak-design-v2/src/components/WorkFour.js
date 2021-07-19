@@ -15,10 +15,8 @@ export const WorkFour = () => {
                                     <img alt="Carribean Geneology Library logo" src={ CarribeanLogo } className="library-logo"/>
                                     {/* <!-- /SVG logo --> */}
                                     <h3 className="sub-heading">
-                                        <Badge pill id="badgeFont" className="mr-2 mt-2 mb-1">3rd party API</Badge>
-                                        <Badge pill id="badgeFont" className="mr-2 mb-1">JS Plugins</Badge>
-                                        <Badge pill id="badgeFont" className="mr-2 mb-1">JavaScript</Badge>
-                                        <Badge pill id="badgeFont" className="mb-2">SVG Animation</Badge>
+                                        <Badge pill id="badgeFont" className="mr-2 mt-2 mb-1">Graphic Design</Badge>
+                                        <Badge pill id="badgeFont" className="mr-2 mb-1">Vector Graphics</Badge>
                                     </h3>
                                     <button className="btns">View Project</button>
                                 </div>
