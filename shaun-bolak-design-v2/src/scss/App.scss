@@ -383,9 +383,12 @@ html {
 	background-color: $mine-shaft !important;
 }
 
-#nav-container{
+#nav-container {
 	@include for-size(lg-desktop-wide) {
 		max-width: 1320px !important;
+	}
+	@include for-size(xxlg-desktop) {
+		max-width: 1600px !important;
 	}
 }
 
@@ -393,14 +396,16 @@ html {
 	padding: 0;
 }
 .btns {
-	background-color: transparent;
-	font-family: $font-primary-bold;
+	background-color: rgba($color: #131313, $alpha: 0.8);
 	border: 2px solid $primary-color;
+	font-family: $font-primary-bold;
 	color: $white;
 	width: 100%;
 	height: 45px;
 	margin-top: 10px;
 	@include for-size(tablet-portrait) {
+		background-color: transparent;
+		color: $white;
 		width: 400px;
 	}
 
@@ -549,10 +554,15 @@ html {
 
 #badgeFont {
 	font-family: $font-primary-bold;
-	border: 4px solid $primary-color;
+	border: 2px solid $primary-color;
 	border-radius: 0 !important;
-	color: $white;
+	color: $primary-color;
+	background-color: rgba($color: #131313, $alpha: 0.8);
 	@include for-size(desktop) {
+		background-color: transparent;
+		border: 4px solid $primary-color;
+		border-radius: 0 !important;
+		color: $white;
 		font-size: 16px;
 	}
 	@include for-size(lg-desktop) {
@@ -1110,7 +1120,9 @@ html {
 #styleGuideCopy::after,
 #fsc2020Copy::after,
 #lightBoxCopy::after {
+	display: none;
 	@include for-size(desktop) {
+		display: block;
 		content: '';
 		position: absolute;
 		top: 16%;
@@ -1433,8 +1445,9 @@ html {
 	clear: both;
 	display: block;
 	height: 25px;
-	width: 2px;
+	width: 4px;
 	margin: 9px 10px;
+	background-color: $primary-color-dark;
 }
 
 .link-container {
@@ -1447,6 +1460,22 @@ html {
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	text-align: center;
+}
+
+.link-container a {
+	text-decoration: none !important;
+}
+
+.project-links {
+	color: $white;
+	font-family: $font-primary-bold;
+	font-size: 1rem;
+}
+
+.project-links:hover {
+	color: $primary-color;
+	font-family: $font-primary-bold;
+	transition: 0.3s ease-in;
 }
 
 /* ============================================= */
@@ -1468,18 +1497,24 @@ html {
 }
 
 .work-one {
+	background: no-repeat url('../assets/hsf-work-bg.png');
+	background-position: right -900px top 0;
 	@include for-size(desktop) {
 		background: center / contain no-repeat url('../assets/hsf-work-bg.png');
 	}
 }
 
 .work-two {
+	background: no-repeat url('../assets/four-hire-bg.png');
+	background-position: right -900px top 0;
 	@include for-size(desktop) {
 		background: center / contain no-repeat url('../assets/four-hire-bg.png');
 	}
 }
 
 .work-three {
+	background: no-repeat url('../assets/writer-access-bg.png');
+	background-position: right -900px top 0;
 	@include for-size(desktop) {
 		background: center / contain no-repeat url('../assets/writer-access-bg.png');
 		background-size: auto 328px;
@@ -1490,6 +1525,8 @@ html {
 }
 
 .work-four {
+	background: no-repeat url('../assets/library-bg.png');
+	background-position: right -900px top 0;
 	@include for-size(desktop) {
 		background: center / contain no-repeat url('../assets/library-bg.png');
 	}
@@ -1500,6 +1537,7 @@ html {
 #writerAccess,
 #carribeanGen {
 	width: 100%;
+	height: 400px;
 	@include for-size(tablet-portrait) {
 		width: 445px;
 	}
@@ -1563,12 +1601,13 @@ html {
 }
 
 .writer-access-logo {
-	width: 200px;
-	margin-bottom: 10px;
-	margin-top: 10px;
+	width: 250px;
+	margin-bottom: 32px;
+	margin-top: 100px;
 	@include for-size(tablet-portrait) {
 		width: 350px;
 		margin-bottom: 50px;
+		margin-top: 10px;
 	}
 	@include for-size(desktop) {
 		width: 270px;
@@ -1583,8 +1622,8 @@ html {
 
 .library-logo {
 	width: 200px;
-	margin-bottom: 10px;
-	margin-top: 10px;
+	margin-bottom: 55px;
+	margin-top: 60px;
 	@include for-size(tablet-portrait) {
 		width: 350px;
 		margin-bottom: 50px;
@@ -1880,7 +1919,6 @@ html {
 		line-height: 76px;
 	}
 }
-
 
 .work-title-wrapper {
 	display: flex;
@@ -2193,7 +2231,7 @@ html {
 		line-height: 92px;
 	}
 	@include for-size(xlg-desktop) {
-		font-size: 10rem;
+		font-size: 8rem;
 		line-height: 127px;
 		margin-top: 0px;
 		margin-bottom: 0px;
@@ -2229,9 +2267,9 @@ html {
 .contact-email-label {
 	font-size: 2rem;
 	color: $white;
- 	font-family: $font-primary-reg;
-	 color: $primary-color;
-	 @include for-size(tablet-landscape) {
+	font-family: $font-primary-reg;
+	color: $primary-color;
+	@include for-size(tablet-landscape) {
 		font-size: 2.2rem;
 	}
 	@include for-size(lg-desktop) {
@@ -2239,6 +2277,7 @@ html {
 	}
 	@include for-size(xlg-desktop) {
 		font-size: 3rem;
+		padding-left: 80px;
 	}
 }
 
@@ -2250,7 +2289,7 @@ html {
 
 .contact-email:hover {
 	color: $white;
-	transition: .6s ease-in-out;
+	transition: 0.6s ease-in-out;
 }
 
 .fade {
