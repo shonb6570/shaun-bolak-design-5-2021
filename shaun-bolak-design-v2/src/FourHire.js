@@ -12,16 +12,16 @@ import { RightLinksContent } from './components/RightSideBarContent';
 
 export const FourHire = () => {
     return (
-        <div id="hsfContainer">
+        <div id="fourHireContainer">
 
-            <div className="hsf-page-wrapper">
+            <div>
                 {/* hero/landing page */}
                 <div className="four-hire-hero-banner">
                     <div className="work-hero-content">
-                        <span className="hsf-hero-title">
+                        <span className="four-hire-hero-title">
                             Not your ordinary 
                         </span>
-                        <span className="hsf-hero-title">
+                        <span className="four-hire-hero-title">
                             job search site.
                         </span>
                         <span className="hsf-hero-copy work-copy">
@@ -42,7 +42,9 @@ export const FourHire = () => {
                                 <span className="info-item">UX/UI</span>
                             </div>
                         </div>
-
+                        <div className="four-hire-hero-banner-link-container">
+                            <a className="four-hire-hero-banner-link" rel="noreferrer" target="_blank" href="https://www.4hire.com/">www.4hire.com</a>
+                        </div>
                     </div>
                 </div>
                 {/* /hero/landing page */}
@@ -165,8 +167,7 @@ export const FourHire = () => {
                                 </div>
                                 <div className="typography-headline montserrat-bold">
                                     <span>
-                                    I can feel it coming in the air tonight, Oh lord.
-                                    I've been waiting for this moment for all my life.
+                                    I can feel it coming in the air tonight. Oh lord.
                                     </span>
                                 </div>
     

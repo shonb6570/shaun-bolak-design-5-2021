@@ -18,16 +18,16 @@ import { RightLinksContent } from './components/RightSideBarContent';
 
 export const WriterAccess = () => {
     return (
-        <div id="hsfContainer">
+        <div id="waContainer">
 
-            <div className="hsf-page-wrapper">
+            <div className="wa-page-wrapper">
                 {/* hero/landing page */}
                 <div className="wa-hero-banner">
                     <div className="wa-hero-content work-hero-content">
-                        <span className="hsf-hero-title">
+                        <span className="wa-hero-title">
                             The Content Management Masters
                         </span>
-                        <span className="hsf-hero-copy work-copy">
+                        <span className="wa-hero-copy work-copy">
                             WriterAccess is a Talent Access site, that caters to finding the right professional 
                             to create your content.  From writers, designers, translators to you name it - 
                             they have a formidable talent pool of the best of the best.  I helped them with 

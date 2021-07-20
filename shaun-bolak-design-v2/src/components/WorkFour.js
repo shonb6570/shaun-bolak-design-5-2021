@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Badge from 'react-bootstrap/Badge';
 import CarribeanLogo from '../assets/library-logo.png'
-
+import { Link } from 'react-router-dom';
 
 export const WorkFour = () => {
     return (
@@ -18,7 +18,7 @@ export const WorkFour = () => {
                                         <Badge pill id="badgeFont" className="mr-2 mt-2 mb-1">Graphic Design</Badge>
                                         <Badge pill id="badgeFont" className="mr-2 mb-1">Vector Graphics</Badge>
                                     </h3>
-                                    <button className="btns">View Project</button>
+                                    <Link to="/caribbean-library" className="work-link"><button className="btns">View Project</button></Link>
                                 </div>
                             </div>
                         {/* <!-- /first project (user database)--> */}

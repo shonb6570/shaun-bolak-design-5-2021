@@ -498,14 +498,20 @@ html {
 .sub-heading,
 .work-heading,
 .hsf-hero-title,
+.four-hire-hero-title,
+.wa-hero-title,
+.cl-hero-title,
 .info-heading,
-.work-title {
+.work-title,
+.work-site-link {
 	font-family: $font-primary-reg;
 }
 
 .copy-primary,
 .project-copy,
 .hsf-hero-copy,
+.wa-hero-copy,
+.cl-hero-copy,
 .info-item,
 .work-copy {
 	font-family: $font-secondary;
@@ -1575,6 +1581,29 @@ html {
 	}
 }
 
+.hsf-hero-banner-link-container,
+.four-hire-hero-banner-link-container {
+	display: flex;
+	width: 100%;
+}
+
+.hsf-hero-banner-link,
+.four-hire-hero-banner-link {
+	margin-top: auto;
+	margin-right: auto;
+	padding-top: 40px;
+	padding-left: 10px;
+	font-family: $font-primary-reg;
+	color: $primary-color-dark;
+	font-size: 1.1rem;
+	@include for-size(desktop) {
+		font-size: 1.5rem;
+	}
+	@include for-size(xlg-desktop) {
+		font-size: 1.8rem;
+	}
+}
+
 .hsf-logo {
 	width: 130px;
 	margin-bottom: 27px;
@@ -1654,7 +1683,9 @@ html {
 	}
 }
 
-#hsfContainer {
+#hsfContainer,
+#fourHireContainer,
+#waContainer {
 	margin: 0;
 	@include for-size(tablet-landscape) {
 		margin: inherit;
@@ -1700,7 +1731,7 @@ html {
 	position: absolute;
 	bottom: -8px;
 	right: 0;
-	height: 55%;
+	height: 500px;
 	background: $white;
 	color: $mine-shaft;
 	display: flex;
@@ -1713,15 +1744,20 @@ html {
 		width: 500px;
 		height: 416px;
 	}
-
+	@include for-size(tablet-landscape) {
+		height: 480px;
+	}
+	@include for-size(desktop) {
+		height: 625px;
+	}
 	@include for-size(lg-desktop) {
-		height: 574px;
+		height: 635px;
 		padding: 50px;
 		width: 510px;
 	}
 	@include for-size(xlg-desktop) {
 		width: 610px;
-		height: 650px;
+		height: 720px;
 		padding: 50px 100px 50px 50px;
 	}
 }
@@ -1732,7 +1768,10 @@ html {
 	}
 }
 
-.hsf-hero-title {
+.hsf-hero-title,
+.four-hire-hero-title,
+.wa-hero-title,,
+.cl-hero-title {
 	width: 100%;
 	font-size: 2rem;
 	line-height: 34px;
@@ -1749,7 +1788,9 @@ html {
 		line-height: 66px;
 	}
 }
-.hsf-hero-copy {
+.hsf-hero-copy,
+.wa-hero-copy,
+.cl-hero-copy {
 	font-size: 1rem;
 	margin-top: 30px;
 	@include for-size(xlg-desktop) {
@@ -1811,7 +1852,9 @@ html {
 .four-hire-section-three,
 .wa-section-one,
 .wa-section-two,
-.wa-section-three {
+.wa-section-three,
+.cl-section-one,
+.cl-section-three {
 	background: $white;
 }
 
@@ -1893,6 +1936,7 @@ html {
 .content-one-wrapper {
 	display: flex;
 	flex-direction: column;
+	padding-bottom: 40px;
 	@include for-size(tablet-landscape) {
 		flex-direction: row;
 	}
@@ -1955,6 +1999,7 @@ html {
 	border-left: 8px solid $primary-color;
 	padding-left: 10px;
 	margin-bottom: 40px;
+	margin-top: 40px;
 	@include for-size(xlg-desktop) {
 		margin-bottom: 45px;
 		border-left: 10px solid #c9ad75;
@@ -2107,6 +2152,18 @@ html {
 		background-position: cover;
 		background-size: 100%;
 		height: 90vh;
+	}
+}
+
+.four-hire-hero-banner-link {
+	@include for-size(desktop) {
+		padding-top: 40px;
+	}
+	@include for-size(lg-desktop) {
+		padding-top: 20px;
+	}
+	@include for-size(xlg-desktop) {
+		padding-top: 40px;
 	}
 }
 
@@ -2333,6 +2390,96 @@ html {
 	padding: 0;
 }
 
+
+/* ============================================= */
+/*         Caribbean Library styles              */
+/* ============================================= */
+
+.cl-hero-banner {
+	background: center / cover no-repeat url('../assets/cl-map.jpg');
+	width: 100%;
+	height: 724px;
+	margin: 0;
+	position: relative;
+	border-bottom: 8px solid #c9ad75;
+}
+
+.cl-hero-content {
+	height: 500px;
+	@include for-size(tablet-portrait) {
+		height: 350px;
+	}
+	@include for-size(tablet-landscape) {
+		height: 510px;
+	}
+	@include for-size(lg-desktop) {
+		height: 580px;
+	}
+	@include for-size(xlg-desktop) {
+		height: 630px;
+	}
+}
+
+#cl-graphics-container {
+	background-color: rgb(95, 95, 95);
+}
+
+.cl-section-one {
+	height: 450px;
+	@include for-size(tablet-landscape) {
+		height: 650px;
+	}
+	@include for-size(lg-desktop) {
+		height: 580px;
+	}
+	@include for-size(xlg-desktop) {
+		height: 630px;
+	}
+}
+
+.cl-section-three {
+	height: 250px;
+}
+
+.cl-img {
+	width: 100%;
+	margin-top: 30px;
+}
+
+.cl-img:first-of-type {
+	margin-top: -80px;
+}
+
+.cl-img:last-of-type {
+	margin-bottom: -100px;
+}
+
+.work-site-link-container{
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
+.work-site-link {
+	margin: 150px auto auto;
+	color: $primary-color-dark;
+	text-decoration: none;
+	font-size: 1.4rem;
+	@include for-size(desktop) {
+		font-size: 2rem;
+	}
+	@include for-size(xlg-desktop) {
+		font-size: 2.5rem;
+	}
+}
+
+.work-site-link:hover,
+.hsf-hero-banner-link:hover,
+.four-hire-hero-banner-link:hover {
+	text-decoration: none;
+	color: $black;
+	transition: .3s ease-out;
+}
 /* ============================================= */
 /*         Contact styles                        */
 /* ============================================= */

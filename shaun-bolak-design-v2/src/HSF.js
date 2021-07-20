@@ -39,7 +39,9 @@ export const HSF = () => {
                                 <span className="info-item">Logo Design</span>
                             </div>
                         </div>
-
+                        <div className="hsf-hero-banner-link-container">
+                            <a className="hsf-hero-banner-link" rel="noreferrer" target="_blank" href="https://www.humanserviceforum.org/">www.humanserviceforum.org</a>
+                        </div>
                     </div>
                 </div>
                 {/* /hero/landing page */}

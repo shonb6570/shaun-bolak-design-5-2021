@@ -10,6 +10,7 @@ import { Work } from './Work';
 import { HSF } from './HSF';
 import { FourHire } from './FourHire';
 import { WriterAccess } from './WriterAccess';
+import { CaribLib } from './CaribLib';
 import { Design } from './Design';
 import { Contact } from './Contact';
 import { FourOFour } from './FourOFour';
@@ -31,6 +32,7 @@ class App extends Component {
                 <Route path='/hsf' component={ HSF } />
                 <Route path='/fourhire' component={ FourHire } />
                 <Route path='/writeraccess' component={ WriterAccess } />
+                <Route path='/caribbean-library' component={ CaribLib } />
                 <Route path='/design' component={ Design } />
                 <Route path='/contact' component={ Contact } />
                 <Route component={ FourOFour} />
