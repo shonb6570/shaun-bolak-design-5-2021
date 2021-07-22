@@ -37,7 +37,9 @@ export const CaribLib = () => {
                                 <span className="info-item">Wordpress Themes</span>
                             </div>
                         </div>
-
+                        <div className="cl-hero-banner-link-container">
+                            <a className="cl-hero-banner-link" rel="noreferrer" target="_blank" href="https://cgl.vi/">www.cgl.vi</a>
+                        </div>
                     </div>
                 </div>
                 {/* /hero/landing page */}
@@ -93,9 +95,6 @@ export const CaribLib = () => {
                 </Container>
 
                 <Container className="cl-section-three text-center"  fluid="true">
-                    <div className="link-container">
-                        <a className="work-site-link" rel="noreferrer" target="_blank" href="https://cgl.vi/">Visit the Caribbean Genealogy Library Here</a>
-                    </div>
                 </Container>
                 {/* /page content */}
             </div>

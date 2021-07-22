@@ -45,7 +45,9 @@ export const WriterAccess = () => {
                                 <span className="info-item">Wordpress Themes</span>
                             </div>
                         </div>
-
+                        <div className="wa-hero-banner-link-container">
+                            <a className="wa-hero-banner-link" rel="noreferrer" target="_blank" href="https://www.writeraccess.com/">www.writeraccess.com</a>
+                        </div>
                     </div>
                 </div>
                 {/* /hero/landing page */}

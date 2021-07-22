@@ -1582,13 +1582,17 @@ html {
 }
 
 .hsf-hero-banner-link-container,
-.four-hire-hero-banner-link-container {
+.four-hire-hero-banner-link-container,
+.wa-hero-banner-link-container,
+.cl-hero-banner-link-container {
 	display: flex;
 	width: 100%;
 }
 
 .hsf-hero-banner-link,
-.four-hire-hero-banner-link {
+.four-hire-hero-banner-link,
+.wa-hero-banner-link,
+.cl-hero-banner-link {
 	margin-top: auto;
 	margin-right: auto;
 	padding-top: 40px;
@@ -1771,7 +1775,6 @@ html {
 .hsf-hero-title,
 .four-hire-hero-title,
 .wa-hero-title,
-,
 .cl-hero-title {
 	width: 100%;
 	font-size: 2rem;
@@ -2156,15 +2159,16 @@ html {
 	}
 }
 
-.four-hire-hero-banner-link {
+.four-hire-hero-banner-link,
+.cl-hero-banner-link {
 	@include for-size(desktop) {
-		padding-top: 40px;
+		padding-top: 36px;
 	}
 	@include for-size(lg-desktop) {
-		padding-top: 20px;
+		padding-top: 5px;
 	}
 	@include for-size(xlg-desktop) {
-		padding-top: 40px;
+		padding-top: 25px;
 	}
 }
 
@@ -2292,16 +2296,16 @@ html {
 .wa-hero-content {
 	height: 500px;
 	@include for-size(tablet-portrait) {
-		height: 350px;
+		height: 450px;
 	}
 	@include for-size(tablet-landscape) {
-		height: 510px;
+		height: 590px;
 	}
 	@include for-size(lg-desktop) {
-		height: 580px;
+		height: 660px;
 	}
 	@include for-size(xlg-desktop) {
-		height: 630px;
+		height: 730px;
 	}
 }
 
@@ -2454,28 +2458,10 @@ html {
 	margin-bottom: -100px;
 }
 
-.work-site-link-container {
-	display: flex;
-	height: 100%;
-	width: 100%;
-}
-
-.work-site-link {
-	margin: 150px auto auto;
-	color: $primary-color-dark;
-	text-decoration: none;
-	font-size: 1.4rem;
-	@include for-size(desktop) {
-		font-size: 2rem;
-	}
-	@include for-size(xlg-desktop) {
-		font-size: 2.5rem;
-	}
-}
-
-.work-site-link:hover,
 .hsf-hero-banner-link:hover,
-.four-hire-hero-banner-link:hover {
+.four-hire-hero-banner-link:hover,
+.wa-hero-banner-link:hover,
+.cl-hero-banner-link:hover {
 	text-decoration: none;
 	color: $black;
 	transition: 0.3s ease-out;
