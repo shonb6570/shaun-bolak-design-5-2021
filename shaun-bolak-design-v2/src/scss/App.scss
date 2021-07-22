@@ -396,7 +396,7 @@ html {
 	padding: 0;
 }
 .btns {
-	background-color: rgba($color: #131313, $alpha: 0.8);
+	background-color: rgba($color: #c9ad75, $alpha: 0.8);
 	border: 2px solid $primary-color;
 	font-family: $font-primary-bold;
 	color: $white;
@@ -404,7 +404,7 @@ html {
 	height: 45px;
 	margin-top: 10px;
 	@include for-size(tablet-portrait) {
-		background-color: transparent;
+		// background-color: transparent;
 		color: $white;
 		width: 350px;
 	}
@@ -566,8 +566,8 @@ html {
 	color: $primary-color;
 	background-color: rgba($color: #131313, $alpha: 0.8);
 	@include for-size(desktop) {
-		background-color: transparent;
-		color: $white;
+		// background-color: transparent;
+		// color: $white;
 		font-size: 16px;
 	}
 	@include for-size(lg-desktop) {
@@ -1770,7 +1770,8 @@ html {
 
 .hsf-hero-title,
 .four-hire-hero-title,
-.wa-hero-title,,
+.wa-hero-title,
+,
 .cl-hero-title {
 	width: 100%;
 	font-size: 2rem;
@@ -2390,7 +2391,6 @@ html {
 	padding: 0;
 }
 
-
 /* ============================================= */
 /*         Caribbean Library styles              */
 /* ============================================= */
@@ -2454,7 +2454,7 @@ html {
 	margin-bottom: -100px;
 }
 
-.work-site-link-container{
+.work-site-link-container {
 	display: flex;
 	height: 100%;
 	width: 100%;
@@ -2478,7 +2478,7 @@ html {
 .four-hire-hero-banner-link:hover {
 	text-decoration: none;
 	color: $black;
-	transition: .3s ease-out;
+	transition: 0.3s ease-out;
 }
 /* ============================================= */
 /*         Contact styles                        */
