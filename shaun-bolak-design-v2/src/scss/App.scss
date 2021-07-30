@@ -569,8 +569,6 @@ html {
 	color: $primary-color;
 	background-color: rgba($color: #131313, $alpha: 0.8);
 	@include for-size(desktop) {
-		// background-color: transparent;
-		// color: $white;
 		font-size: 16px;
 	}
 	@include for-size(lg-desktop) {
@@ -581,15 +579,14 @@ html {
 //side-nav left
 @media (max-width: 575px) {
 	.left-links {
-		top: 555px;
-		left: 35px;
+		top: 595px;
+		left: 52px;
 	}
 }
 
 @media (min-width: 576px) {
 	.left-links {
-		top: 600px;
-		left: 50px;
+		top: 690px;
 	}
 }
 
@@ -679,11 +676,11 @@ html {
 	display: flex;
 	flex-direction: row;
 	position: absolute;
-	top: 490px;
-	left: 10px;
+	top: 531px;
+	left: 28px;
 	transform: rotate(-90deg);
 	@include for-size(tablet-portrait) {
-		top: 525px;
+		top: 615px;
 		left: 30px;
 	}
 	@include for-size(tablet-landscape) {
@@ -785,7 +782,7 @@ html {
 		margin-top: 70px;
 	}
 	@include for-size(xlg-desktop) {
-		margin-top: 235px;
+		margin-top: 150px;
 	}
 	@include for-size(xlg-desktop) {
 		background-size: 100% 768px;
