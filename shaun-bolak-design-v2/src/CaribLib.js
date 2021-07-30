@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import { NavigationBar } from './components/Navigation';
 import CLGraphicOne from './assets/cl-graphic-1.png';
 import CLGraphicTwo from './assets/cl-graphic-2.png';
 import CLGraphicThree from './assets/cl-graphic-3.png';
@@ -10,6 +11,7 @@ import { RightLinksContent } from './components/RightSideBarContent';
 export const CaribLib = () => {
     return (
         <div id="waContainer">
+        <NavigationBar />
 
             <div>
                 {/* hero/landing page */}

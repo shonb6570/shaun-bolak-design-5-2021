@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import { NavigationBar } from './components/Navigation';
 import designTitle from './assets/design-title.svg';
 import { ProjectOne } from './components/ProjectOne';
 import { ProjectTwo } from './components/ProjectTwo';
@@ -12,7 +13,7 @@ import { RightLinksContent } from './components/RightSideBarContent';
 export const Design = () => {
     return (
         <Container fluid className="design-container">
-
+            <NavigationBar />
             <div className="design-page-wrapper">
 
                 <Container>

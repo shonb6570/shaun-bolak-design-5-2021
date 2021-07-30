@@ -5,9 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Logo from '../assets/logo-full.svg';
 import { NavLinks } from './NavLinks';
 
-console.log(window.location.pathname);
-
-export const NavigationBar = (props) => (
+export const NavigationBar = () => {
+    return (
         <Navbar sticky="top" id="navigation-bar" expand="lg">
         <Container id="nav-container">
             <Navbar.Brand id="navigation-logo" href="/">
@@ -25,7 +24,8 @@ export const NavigationBar = (props) => (
             </Navbar.Collapse>
         </Container>
         </Navbar>  
-)
+    );
+}
 
 
 

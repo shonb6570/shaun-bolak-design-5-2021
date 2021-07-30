@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import { NavigationBar } from './components/Navigation';
 import WorkTitle from './assets/work-title.svg';
 import { WorkOne } from './components/WorkOne';
 import { WorkTwo } from './components/WorkTwo';
@@ -11,6 +12,7 @@ import { RightLinksContent } from './components/RightSideBarContent';
 export const Work = () => {
     return (
         <Container fluid className="work-container">
+            <NavigationBar />
 
             <div className="work-page-wrapper">
 

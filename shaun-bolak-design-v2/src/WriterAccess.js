@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import { NavigationBar } from './components/Navigation';
 import WABadgeOne from './assets/wa-badge-one.png';
 import WABadgeTwo from './assets/wa-badge-two.png';
 import WABadgeThree from './assets/wa-badge-three.png';
@@ -19,6 +20,7 @@ import { RightLinksContent } from './components/RightSideBarContent';
 export const WriterAccess = () => {
     return (
         <div id="waContainer">
+            <NavigationBar />
 
             <div className="wa-page-wrapper">
                 {/* hero/landing page */}

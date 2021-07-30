@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import { NavigationBar } from './components/Navigation';
 import AboutTitle from './assets/about-title.svg';
 import AboutPhoto from './assets/portrait.svg';
 import { LeftLinksContent } from './components/LeftSideBarContent';
@@ -8,6 +9,7 @@ import { RightLinksContent } from './components/RightSideBarContent';
 export const About = () => {
     return (
         <Container fluid>
+            <NavigationBar />
 
             <div className="about-page-wrapper">
 

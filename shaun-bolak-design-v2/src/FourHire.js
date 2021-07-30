@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import { NavigationBar } from './components/Navigation';
 import FourHireHomeImage from './assets/fourhire-home.jpg';
 import FourHireContentImage from './assets/fourhire-content.jpg';
 import FourHireLogo from './assets/four-hire-logo.png';
@@ -13,6 +14,7 @@ import { RightLinksContent } from './components/RightSideBarContent';
 export const FourHire = () => {
     return (
         <div id="fourHireContainer">
+            <NavigationBar />
 
             <div>
                 {/* hero/landing page */}

@@ -6,7 +6,7 @@ import { LeftLinks } from './components/LeftSideBar';
 import { RightLinks } from './components/RightSideBar';
 
 export const Home = () => {
-    return (
+        return (
         <Container fluid className="home-bg-img">
             <Transition />
             <LeftLinks />

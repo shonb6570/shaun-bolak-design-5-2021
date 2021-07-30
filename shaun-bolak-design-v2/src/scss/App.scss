@@ -383,6 +383,11 @@ html {
 	background-color: $mine-shaft !important;
 }
 
+#errorPage {
+	color: $white;
+	margin: 20% 20%;
+}
+
 #nav-container {
 	@include for-size(lg-desktop-wide) {
 		max-width: 1320px !important;
@@ -406,18 +411,16 @@ html {
 	@include for-size(tablet-portrait) {
 		// background-color: transparent;
 		color: $white;
-		width: 350px;
+		width: 300px;
 	}
 
 	@include for-size(desktop) {
-		width: 300px;
 		height: 35px;
 		margin-top: 5px;
 	}
 	@include for-size(lg-desktop) {
 		height: 45px;
 		margin-top: 10px;
-		width: 370px;
 	}
 }
 
@@ -578,14 +581,14 @@ html {
 //side-nav left
 @media (max-width: 575px) {
 	.left-links {
-		top: 585px;
-		left: 50px;
+		top: 555px;
+		left: 35px;
 	}
 }
 
 @media (min-width: 576px) {
 	.left-links {
-		top: 703px;
+		top: 600px;
 		left: 50px;
 	}
 }
@@ -676,11 +679,12 @@ html {
 	display: flex;
 	flex-direction: row;
 	position: absolute;
-	top: 510px;
+	top: 490px;
 	left: 10px;
 	transform: rotate(-90deg);
 	@include for-size(tablet-portrait) {
-		top: 625px;
+		top: 525px;
+		left: 30px;
 	}
 	@include for-size(tablet-landscape) {
 		top: 680px;
@@ -696,7 +700,7 @@ html {
 	@include for-size(xlg-desktop) {
 		transform: rotate(-90deg);
 		top: 460px;
-		left: 0px;
+		left: 17px;
 	}
 }
 
@@ -715,6 +719,12 @@ html {
 		height: 60px;
 		width: 60px;
 	}
+}
+
+.social-links:hover,
+.social-links-content-page:hover {
+	fill: $primary-color-dark;
+	transition: 0.3s ease-in;
 }
 
 .cls-1 {
@@ -766,6 +776,7 @@ html {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover !important;
+	margin-top: 40px;
 	@include for-size(tablet-portrait) {
 		margin-top: 50px;
 	}
@@ -774,7 +785,7 @@ html {
 		margin-top: 70px;
 	}
 	@include for-size(xlg-desktop) {
-		margin-top: 100px;
+		margin-top: 235px;
 	}
 	@include for-size(xlg-desktop) {
 		background-size: 100% 768px;
@@ -803,22 +814,27 @@ html {
 		display: flex;
 		flex-direction: column;
 		height: 620px;
+		text-align: left;
+		width: 330px;
 	}
 	@include for-size(tablet-landscape) {
 		height: 500px;
+		width: 380px;
 	}
 	@include for-size(desktop) {
 		height: 550px;
+		width: 530px;
 	}
 	@include for-size(lg-desktop) {
 		height: 725px;
+		width: 630px;
 	}
 	@include for-size(xlg-desktop) {
 		height: 680px;
 	}
 	@include for-size(xxlg-desktop) {
 		height: 810px;
-		width: fit-content;
+		width: 800px;
 	}
 }
 
@@ -1056,6 +1072,7 @@ html {
 	}
 	@include for-size(xlg-desktop) {
 		height: 900px;
+		margin-bottom: 150px;
 	}
 	@include for-size(xxlg-desktop) {
 		width: 100%;
@@ -1114,7 +1131,9 @@ html {
 }
 
 .project-examples:last-child {
-	margin-bottom: 200px;
+	@include for-size(xlg-desktop) {
+		margin-bottom: 200px;
+	}
 }
 
 // Individual project :before/:after element styles
@@ -1217,6 +1236,7 @@ html {
 .right-links-content-page {
 	display: block;
 	flex-direction: row;
+	margin-bottom: 50px;
 	@include for-size(desktop) {
 		display: flex;
 		margin-bottom: 60px;
@@ -1225,7 +1245,7 @@ html {
 	@include for-size(xlg-desktop) {
 		position: fixed;
 		bottom: 60vh;
-		left: -5px;
+		left: 14px;
 		transform: rotate(-90deg);
 	}
 }
@@ -1293,6 +1313,9 @@ html {
 		height: 40px;
 		width: 40px;
 		padding-right: 8px;
+	}
+	@include for-size(xlg-desktop) {
+		margin-top: -10px;
 	}
 }
 
@@ -1501,6 +1524,12 @@ html {
 	margin-top: 60px;
 }
 
+.work-title-svg {
+	@include for-size(tablet-landscape) {
+		margin-top: 25px;
+	}
+}
+
 .work-one {
 	background: no-repeat url('../assets/hsf-work-bg.png');
 	background-position: right -917px top -70px;
@@ -1554,7 +1583,7 @@ html {
 #writerAccess,
 #carribeanGen {
 	width: 100%;
-	height: 400px;
+	height: 470px;
 	@include for-size(tablet-portrait) {
 		width: 445px;
 		margin-left: 40px;
@@ -1572,12 +1601,11 @@ html {
 	}
 	@include for-size(lg-desktop-wide) {
 		padding-top: 10px;
-		width: 500px;
+		width: 440px;
 		padding-left: 85px;
 	}
 	@include for-size(xlg-desktop) {
 		padding-top: 10px;
-		width: 500px;
 	}
 }
 
@@ -1613,17 +1641,22 @@ html {
 	margin-bottom: 27px;
 	margin-top: 25px;
 	@include for-size(tablet-portrait) {
-		margin-bottom: 30px;
-		margin-top: 30px;
+		margin-bottom: 50px;
+		margin-top: 60px;
 	}
 	@include for-size(desktop) {
-		width: 105px;
+		width: 98px;
 		margin-bottom: 10px;
-		margin-top: 10px;
+		margin-top: 18px;
 	}
 	@include for-size(lg-desktop) {
-		width: 130px;
-		margin-bottom: 15px;
+		width: 125px;
+		margin-bottom: 18px;
+		margin-top: 25px;
+	}
+	@include for-size(lg-desktop-wide) {
+		width: 100px;
+		margin-bottom: 17px;
 		margin-top: 15px;
 	}
 }
@@ -1633,13 +1666,13 @@ html {
 	margin-bottom: 50px;
 	margin-top: 45px;
 	@include for-size(tablet-portrait) {
-		margin-bottom: 50px;
-		margin-top: 40px;
+		margin-bottom: 60px;
+		margin-top: 80px;
 	}
 	@include for-size(desktop) {
 		width: 130px;
-		margin-bottom: 10px;
-		margin-top: 20px;
+		margin-bottom: 30px;
+		margin-top: 35px;
 	}
 	@include for-size(lg-desktop) {
 		width: 200px;
@@ -1653,27 +1686,32 @@ html {
 	margin-top: 100px;
 	@include for-size(tablet-portrait) {
 		width: 350px;
-		margin-bottom: 50px;
-		margin-top: 80px;
+		margin-bottom: 65px;
+		margin-top: 110px;
 	}
 	@include for-size(desktop) {
 		width: 270px;
-		margin-bottom: 30px;
-		margin-top: 50px;
+		margin-bottom: 20px;
+		margin-top: 35px;
 	}
 	@include for-size(lg-desktop) {
 		width: 300px;
 		margin-bottom: 30px;
+		margin-top: 60px;
+	}
+	@include for-size(lg-desktop-wide) {
+		margin-top: 35px;
 	}
 }
 
 .library-logo {
 	width: 250px;
 	margin-bottom: 55px;
-	margin-top: 60px;
+	margin-top: 90px;
 	@include for-size(tablet-portrait) {
 		width: 350px;
-		margin-bottom: 50px;
+		margin-bottom: 20px;
+		margin-top: 120px;
 	}
 	@include for-size(desktop) {
 		width: 270px;
@@ -1682,7 +1720,7 @@ html {
 	}
 	@include for-size(lg-desktop) {
 		width: 300px;
-		margin-bottom: 35px;
+		margin-bottom: 15px;
 		margin-top: 42px;
 	}
 }
@@ -1707,17 +1745,13 @@ html {
 		height: 80vh;
 	}
 	@include for-size(desktop) {
-		background-position: left -300px top -30px;
-		background-size: 135%;
+		background-position: left -415px top -30px;
+		background-size: 163%;
 	}
 	@include for-size(lg-desktop) {
-		background-position: left -97px top -4px;
-		background-size: 110%;
-		height: 86vh;
-	}
-	@include for-size(xlg-desktop) {
-		background-position: left -188px top -4px;
-		height: 95vh;
+		background-position: left 0px top 0px;
+		background-size: cover;
+		height: 70vh;
 	}
 }
 
@@ -1768,7 +1802,7 @@ html {
 
 .hsf-hero-content {
 	@include for-size(xlg-desktop) {
-		padding: 50px 90px 50px 50px;
+		padding: 50px 90px 50px 30px;
 	}
 }
 
@@ -1871,7 +1905,6 @@ html {
 	}
 	@include for-size(xlg-desktop) {
 		padding-top: 500px;
-		padding-bottom: 120px;
 	}
 }
 .hsf-section-two,
@@ -1886,6 +1919,14 @@ html {
 		height: 1100px;
 	}
 }
+
+.wa-section-two {
+	height: 800px;
+	@include for-size(xlg-desktop) {
+		height: 1100px;
+	}
+}
+
 .section-content {
 	display: flex;
 	flex-direction: column;
@@ -1929,6 +1970,7 @@ html {
 }
 
 .content-three {
+	margin-bottom: 40px;
 	@include for-size(tablet-landscape) {
 		width: 650px;
 	}
@@ -2123,6 +2165,13 @@ html {
 	}
 }
 
+.cl-badge-one {
+	margin-top: 50px;
+	@include for-size(desktop) {
+		margin-top: 25px;
+	}
+}
+
 /* ============================================= */
 /*         FourHire styles                       */
 /* ============================================= */
@@ -2137,25 +2186,27 @@ html {
 	position: relative;
 	border-bottom: 8px solid $primary-color;
 	@include for-size(tablet-landscape) {
+		background-position: center top 0px;
 		background-size: 1000px 1000px;
-		height: 94vh;
+		height: 74vh;
 	}
 	@include for-size(desktop) {
-		background-position: left -280px top -150px;
+		background-position: left -280px top -0px;
 		background-size: 130%;
+		height: 68vh;
 	}
 	@include for-size(lg-desktop) {
-		background-position: left -97px top -100px;
-		background-size: 110%;
+		background-position: left 0px top 0px;
+		background-size: cover;
+		height: 62vh;
 	}
 	@include for-size(lg-desktop-wide) {
 		background-position: left -97px top -200px;
 		background-size: 110%;
 	}
 	@include for-size(xlg-desktop) {
-		background-position: cover;
-		background-size: 100%;
-		height: 90vh;
+		height: 65vh;
+		background-size: cover;
 	}
 }
 
@@ -2250,7 +2301,6 @@ html {
 	}
 	@include for-size(xlg-desktop) {
 		padding-top: 500px;
-		padding-bottom: 120px;
 	}
 }
 
@@ -2411,7 +2461,7 @@ html {
 .cl-hero-content {
 	height: 500px;
 	@include for-size(tablet-portrait) {
-		height: 350px;
+		height: 410px;
 	}
 	@include for-size(tablet-landscape) {
 		height: 510px;
@@ -2521,24 +2571,23 @@ html {
 .contact-copy {
 	color: $white;
 	font-family: $font-primary-bold;
-	font-size: 3.5rem;
-	line-height: 52px;
+	font-size: 5rem;
+	line-height: 65px;
 	margin-top: 60px;
 	margin-bottom: 50px;
 	@include for-size(desktop) {
-		font-size: 5rem;
-		line-height: 66px;
+		font-size: 7rem;
+		line-height: 88px;
 	}
 	@include for-size(lg-desktop) {
-		font-size: 6rem;
-		line-height: 92px;
+		font-size: 7.5rem;
+		line-height: 94px;
 	}
 	@include for-size(xlg-desktop) {
 		font-size: 8rem;
-		line-height: 127px;
+		line-height: 100px;
 		margin-top: 0px;
 		margin-bottom: 0px;
-		height: 720px;
 	}
 }
 
@@ -2576,20 +2625,28 @@ html {
 	font-family: $font-primary-reg;
 	color: $primary-color;
 	@include for-size(tablet-landscape) {
-		font-size: 2.2rem;
+		font-size: 1.5rem;
+	}
+	@include for-size(desktop) {
+		font-size: 2rem;
 	}
 	@include for-size(lg-desktop) {
-		font-size: 2.5rem;
-	}
-	@include for-size(xlg-desktop) {
-		font-size: 3rem;
-		padding-left: 80px;
+		font-size: 2.2rem;
 	}
 }
 
 .contact-form {
 	@include for-size(tablet-landscape) {
 		margin: auto auto;
+		width: 265px;
+	}
+	@include for-size(desktop) {
+		margin: auto auto;
+		width: 350px;
+	}
+	@include for-size(lg-desktop) {
+		margin: auto auto;
+		width: 380px;
 	}
 }
 

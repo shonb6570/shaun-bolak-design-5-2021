@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import { NavigationBar } from './components/Navigation';
 import ContactTitle from './assets/contact-title.svg';
 import { LeftLinksContent } from './components/LeftSideBarContent';
 import { RightLinksContent } from './components/RightSideBarContent';
@@ -7,6 +8,7 @@ import { RightLinksContent } from './components/RightSideBarContent';
 export const Contact = () => {
     return (
         <Container fluid className="Contact-container">
+            <NavigationBar />
 
             <div className="Contact-page-wrapper">
 

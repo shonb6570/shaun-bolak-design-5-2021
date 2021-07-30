@@ -15,7 +15,7 @@ export const WorkFour = () => {
                                     <img alt="Carribean Geneology Library logo" src={ CarribeanLogo } className="library-logo"/>
                                     {/* <!-- /SVG logo --> */}
                                     <h3 className="sub-heading">
-                                        <Badge pill id="badgeFont" className="mr-2 mt-2 mb-1">Graphic Design</Badge>
+                                        <Badge pill id="badgeFont" className="mr-2 mb-1 cl-badge-one">Graphic Design</Badge>
                                         <Badge pill id="badgeFont" className="mr-2 mb-1">Vector Graphics</Badge>
                                     </h3>
                                     <Link to="/caribbean-library" className="work-link"><button className="btns">View Project</button></Link>

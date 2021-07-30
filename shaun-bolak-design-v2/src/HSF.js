@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import { NavigationBar } from './components/Navigation';
 import HSFSiteImage from './assets/hsf-site-img2.jpg';
 import HSFLogoAbrev from './assets/HSF_Logo_Abbreviated_Light.png';
 import HSFLogoFull from './assets/HSF_Logo_Full_Light.png';
@@ -9,6 +10,7 @@ import { RightLinksContent } from './components/RightSideBarContent';
 export const HSF = () => {
     return (
         <div id="hsfContainer">
+            <NavigationBar />
 
             <div className="hsf-page-wrapper">
                 {/* hero/landing page */}
