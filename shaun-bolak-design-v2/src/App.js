@@ -22,8 +22,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="site-bg">
-            <Layout>      
+        <div className="site-bg">    
               <Router>
                 <Switch>
                 
@@ -41,7 +40,6 @@ class App extends Component {
                 </Switch>
               </Router>
             
-            </Layout>
           <Footer />
         </div>
       </React.Fragment> 

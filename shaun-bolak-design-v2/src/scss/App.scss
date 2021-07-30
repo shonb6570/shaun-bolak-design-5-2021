@@ -216,7 +216,7 @@ $fourhire-font-secondary-medium: 'Raleway_Medium', sans-serif;
 	}
 
 	50% {
-		width: 100vw;
+		width: 98vw;
 	}
 	80% {
 		opacity: 0.5;
@@ -587,6 +587,7 @@ html {
 @media (min-width: 576px) {
 	.left-links {
 		top: 690px;
+		left: 52px;
 	}
 }
 
@@ -765,6 +766,11 @@ html {
 	}
 }
 // home content
+
+#homeContainer {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
 
 .home-bg-img {
 	background-image: url('../assets/bg-img2.svg');
@@ -2773,7 +2779,8 @@ html {
 	opacity: 1;
 	background-color: $mine-shaft;
 	position: absolute;
-	z-index: 1000;
+	overflow: hidden;
+	z-index: 5000;
 	top: 0;
 	left: 0;
 	animation: 1.6s disappear;
@@ -2785,7 +2792,8 @@ html {
 	width: 0vw;
 	background-color: $primary-color-dark;
 	position: absolute;
-	z-index: 1001;
+	overflow: hidden;
+	z-index: 5001;
 	top: 0;
 	right: 0;
 	animation: 1.6s transition-one;

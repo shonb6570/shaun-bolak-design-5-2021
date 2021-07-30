@@ -8,7 +8,7 @@ import { RightLinks } from './components/RightSideBar';
 
 export const Home = () => {
         return (
-        <Container fluid>
+        <Container fluid id="homeContainer">
             <NavBarHome />
             <Container fluid className="home-bg-img">
                 <Transition />
